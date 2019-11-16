@@ -5,9 +5,7 @@ import Header from "./Header";
 const FarmerHomepage = () => {
     return (
         <div className="homepage-container">
-            <div className="header">
-                <Header />
-            </div>
+            <Header />
             <div className="homepage-links">
                 <Link>View Orders</Link>
                  <Link>Add/Edit Inventory</Link>
