@@ -11,7 +11,8 @@
 	align-items: center;
 }
 
-.initial-sign-in-section {
+/* initial sign in page */
+.initial-sign-in-page-section {
 	height: 90vh;
 	display: flex;
 	flex-direction: column;
@@ -21,7 +22,7 @@
 	background-size: cover;
 }
 
-.initial-sign-in-section p {
+.initial-sign-in-page-section p {
 	color: #E5E5E5;
 }
 
@@ -49,4 +50,24 @@
 	color: #202020;
 	font-family: 'Roboto', sans-serif;
 	outline: none;
+}
+
+/* farmer sign in page */
+
+.farmer-and-shopper-sign-in-page-section {
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.farmer-and-shopper-sign-in-page-section h2 {
+	margin-bottom: 2rem;
+	font-size: 2rem;
+	color: #202020;
+}
+
+.farmer-and-shopper-sign-in-page-section p {
+	color: #3d6600;
 }
