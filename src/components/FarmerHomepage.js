@@ -10,11 +10,11 @@ const FarmerHomepage = () => {
             </div>
             <div className="homepage-links">
                 <Link>View Orders</Link>
-                 <Link>Add/Edit Inventory</Link>
+                <Link>Add/Edit Inventory</Link>
             </div>
             <div className="homepage-links">
                 <Link>Add Upcoming Harvests</Link>
-                 <Link>View Farm Profile</Link>
+                <Link>View Farm Profile</Link>
             </div>
         </div>
         
