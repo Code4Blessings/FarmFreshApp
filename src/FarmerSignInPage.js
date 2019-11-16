@@ -9,16 +9,16 @@ const validate = ({username, password}) => {
 	
 	// validating username
 	if (!username) {
-		errors.username = '*Please enter a username';
+		errors.username = 'Please enter a username';
 	} else if (username.length < 2) {
-		errors.username= '*Your name must have two characters or more';
+		errors.username= 'Your name must have two characters or more';
 	};
 
 	// validating password
 	if (!password) {
-		errors.password = '*Please enter a password';
+		errors.password = 'Please enter a password';
 	} else if (/\d/.test(password) === false) {
-		errors.password = '*Your password must contain a number';
+		errors.password = 'Your password must contain a number';
 	};
 
 	return errors;
@@ -33,33 +33,39 @@ const FarmerSignInPage = () => {
                 {/* form will be specific to the page i think */}
                 <Formik
 					initialValues = {{
-						farmFreshID: '',
+						username: '',
 						password: '',
 					}}
 
-					// onSubmit = {(values, tools) => {
-					// 	axios.post('https://reqres.in/api/users', values)
-					// 		.then(response => {
-					// 			setMessage([...message, response.data]);
-					// 			tools.resetForm();
-					// 		})
-					// 		.catch(error => {
-					// 			console.log(error);
-					// 		})
-					// }}
+					onSubmit = {(values, tools) => {
+						axios.post('https://reqres.in/api/users', values)
+							.then(response => {
+								// setMessage([...message, response.data]);
+								// tools.resetForm();
+							})
+							.catch(error => {
+								console.log(error);
+							})
+					}}
 
 					validate = {validate}
 
 					render = {() => {
 						return (
-							<Form autoComplete='off'>
-								<Field name='username' type='text' placeholder='Enter Farm Fresh ID'/>
-								<ErrorMessage name='username' component='div' className='error'/>
+							<Form className='form' autoComplete='off'>
+								<div className='input-container'>
+									<label htmlFor='username'>Farm Fresh ID</label>
+									<Field name='username' type='text' placeholder='Enter Farm Fresh ID'/>
+									<ErrorMessage name='username' component='div' className='error'/>
+								</div>
+		
+								<div className='input-container'>
+									<label htmlFor='password'>Password</label>
+									<Field name='password' type='password' placeholder='Enter Password'/>
+									<ErrorMessage name='password' component='div' className='error'/>
+								</div>
 
-								<Field name='password' type='password' placeholder='Enter Password'/>
-								<ErrorMessage name='password' component='div' className='error'/>
-								
-								<input className='farmer-sign-in-button' type='submit'/>
+								<button className='farmer-sign-in-button' type='submit'>Sign In</button>
 							</Form>
 						)
 					}}
