@@ -34,8 +34,7 @@
 	font-size: 1.25rem;
 	color: white;
 	font-family: 'Roboto', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	outline: none;
 }
 
 .shopper-sign-in-button {
@@ -48,6 +47,5 @@
 	font-size: 1.25rem;
 	color: #202020;
 	font-family: 'Roboto', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	outline: none;
 }
