@@ -59,7 +59,6 @@
 }
 
 /* farmer sign in page */
-
 .farmer-and-shopper-sign-in-page-section {
 	height: 80vh;
 	display: flex;
@@ -79,7 +78,6 @@
 }
 
 /* form */
-
 .form {
 	display: flex;
 	flex-direction: column;
@@ -112,8 +110,7 @@
 	color: #D10404;
 }
 
-/* Farmer Homepage */
-
+/* farmer homepage */
 .homepage-links {
 	display: flex;
 	justify-content: space-evenly;

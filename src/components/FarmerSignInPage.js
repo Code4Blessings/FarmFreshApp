@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './components/Header';
+import Header from './Header';
 import {Formik, Form, Field, ErrorMessage} from 'formik'
 import axios from 'axios';
 
