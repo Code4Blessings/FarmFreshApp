@@ -3,7 +3,7 @@ import {Route} from "react-router-dom";
 import './App.css';
 import InitialSignInPage from './InitialSignInPage';
 import FarmerSignInPage from './FarmerSignInPage';
-import FarmerHomepage from './components/FamerHomepage'
+import FarmerHomepage from './components/FarmerHomepage'
 
 function App() {
 	return (
