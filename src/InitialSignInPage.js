@@ -7,7 +7,7 @@ const InitialSignInPage = () => {
     return (
         <div>
             <Header/>
-            <section className='farmer-sign-in-section'>
+            <section className='initial-sign-in-section'>
                 <FarmerSignInButton/>
                 <ShopperSignInButton/>
                 <p>Create an Account</p>

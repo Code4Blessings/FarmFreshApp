@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+/* header */
 .header {
 	height: 10vh;
 	background: #3d6600;
@@ -10,7 +11,7 @@
 	align-items: center;
 }
 
-.farmer-sign-in-section {
+.initial-sign-in-section {
 	height: 90vh;
 	display: flex;
 	flex-direction: column;
@@ -20,7 +21,7 @@
 	background-size: cover;
 }
 
-.farmer-sign-in-section p {
+.initial-sign-in-section p {
 	color: #E5E5E5;
 }
 
