@@ -69,9 +69,9 @@
 }
 
 .farmer-and-shopper-sign-in-page-section h2 {
-	margin-bottom: 2rem;
+	margin-bottom: 1.5rem;
 	font-size: 2rem;
-	color: #202020;
+	color: #4D4D4D;
 }
 
 .farmer-and-shopper-sign-in-page-section p {
@@ -102,6 +102,10 @@
 	font-family: 'Roboto', sans-serif;
 	font-size: 1rem;
 	outline: none;
+}
+
+.input-container input::placeholder {
+	color: #C4C4C4;
 }
 
 .error {

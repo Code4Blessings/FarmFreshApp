@@ -11,7 +11,7 @@ const validate = ({username, password}) => {
 	if (!username) {
 		errors.username = 'Please enter a username';
 	} else if (username.length < 2) {
-		errors.username= 'Your name must have two characters or more';
+		errors.username= 'Your username must have two characters or more';
 	};
 
 	// validating password
@@ -19,6 +19,8 @@ const validate = ({username, password}) => {
 		errors.password = 'Please enter a password';
 	} else if (/\d/.test(password) === false) {
 		errors.password = 'Your password must contain a number';
+	} else if (password.length < 5) {
+		errors.password = 'Your password must have five characters or more';
 	};
 
 	return errors;
@@ -40,8 +42,9 @@ const FarmerSignInPage = () => {
 					onSubmit = {(values, tools) => {
 						axios.post('https://reqres.in/api/users', values)
 							.then(response => {
-								// setMessage([...message, response.data]);
-								// tools.resetForm();
+								console.log(values);
+								console.log(response);
+								tools.resetForm();
 							})
 							.catch(error => {
 								console.log(error);
