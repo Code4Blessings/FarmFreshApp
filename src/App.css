@@ -4,11 +4,15 @@
 .header {
 	height: 10vh;
 	background: #3d6600;
-	font-size: 1.25rem;
-	color: white;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.header a {
+	text-decoration: none;
+	font-size: 1.25rem;
+	color: white;
 }
 
 /* initial sign in page */
@@ -36,6 +40,7 @@
 	font-size: 1.25rem;
 	color: white;
 	font-family: 'Roboto', sans-serif;
+	cursor: pointer;
 	outline: none;
 }
 
@@ -49,6 +54,7 @@
 	font-size: 1.25rem;
 	color: #202020;
 	font-family: 'Roboto', sans-serif;
+	cursor: pointer;
 	outline: none;
 }
 
