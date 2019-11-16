@@ -3,6 +3,7 @@ import {Route} from "react-router-dom";
 import './App.css';
 import InitialSignInPage from './InitialSignInPage';
 import FarmerSignInPage from './FarmerSignInPage';
+import FarmerHomepage from './components/FamerHomepage'
 
 function App() {
 	return (
@@ -12,7 +13,8 @@ function App() {
 			{/* need to be built
 			<Route exact path='/shopper'> component={ShopperSignInPage}/>
 			<Route path='/farmer/createaccount'> component={FarmerSignUpPage}/>
-			<Route path='/shopper/createaccount'> component={ShopperSignUpPage}/> */}
+      <Route path='/shopper/createaccount'> component={ShopperSignUpPage}/> */}
+      <Route path='/farmer/homepage' component={FarmerHomepage} />
 		</>
 	);
 }

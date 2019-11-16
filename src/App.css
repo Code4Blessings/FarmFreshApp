@@ -111,3 +111,28 @@
 .error {
 	color: #D10404;
 }
+
+/* Farmer Homepage */
+
+.homepage-links {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	width: 100%;
+	height: auto;
+	margin-top: 40px;
+	background-color: #E5E5E5;
+}
+
+ .homepage-links a {
+	background-color: #F7F7F8;
+	text-decoration: none;
+	color: #4D4D4D;
+	font-size: 30px;
+	text-align: center;
+	width: 500px;
+	height: 300px;
+	margin: 20px;
+	padding-top: 120px;
+	box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.13);
+}
