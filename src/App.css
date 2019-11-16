@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 .header {
 	height: 10vh;
 	background: #3d6600;
@@ -6,4 +8,46 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.farmer-sign-in-section {
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-image: url('farmer.jpg');
+	background-size: cover;
+}
+
+.farmer-sign-in-section p {
+	color: #E5E5E5;
+}
+
+.farmer-sign-in-button {
+	height: 4rem;
+	width: 30rem;
+	margin-bottom: 1rem;
+	background: #3d6600;
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 1.25rem;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.shopper-sign-in-button {
+	height: 4rem;
+	width: 30rem;
+	margin-bottom: 1rem;
+	background: #E5E5E5;
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 1.25rem;
+	color: #202020;
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
