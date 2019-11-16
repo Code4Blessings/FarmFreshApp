@@ -8,7 +8,7 @@ const InitialSignInPage = () => {
             <Header/>
             <section className='initial-sign-in-page-section'>
                 <Link to='/farmer/login'><button className='farmer-sign-in-button'>Farmer Sign In</button></Link>
-                <button className='shopper-sign-in-button'>Shopper Sign In</button>
+                <Link to='/shopper/login'><button className='shopper-sign-in-button'>Shopper Sign In</button></Link>
                 <p>Create an Account</p>
             </section>
         </div>
