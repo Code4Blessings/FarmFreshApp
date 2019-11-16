@@ -9,7 +9,7 @@ function App() {
 	return (
 		<>
 			<Route exact path='/' component={InitialSignInPage}/>
-			<Route exact path='/farmer' component={FarmerSignInPage}/>
+			<Route path='/farmer/login' component={FarmerSignInPage}/>
 			{/* need to be built
 			<Route exact path='/shopper'> component={ShopperSignInPage}/>
 			<Route path='/farmer/createaccount'> component={FarmerSignUpPage}/>
