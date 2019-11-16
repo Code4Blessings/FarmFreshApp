@@ -1,6 +1,6 @@
 # React I Rubric
 ## Applied Javascript
-* Student incorperated a third party event/animation library like unto Greensock, Anime, React-motion etc.
+* Student incorporated a third party event/animation library such as Greensock, Anime, React-motion etc.
 ## Intro to React
 * Student was able to architect components to be easily reused. Student used advanced React techniques like the composition pattern, custom hooks, render props, HOCs, etc.
 ## Single Page Application
