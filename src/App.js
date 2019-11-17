@@ -7,7 +7,7 @@ import ShopperSignInPage from './components/ShopperSignInPage';
 import FarmerCreateAccountPage from './components/FarmerCreateAccountPage';
 import ShopperCreateAccountPage from './components/ShopperCreateAccountPage';
 import FarmerHomepage from './components/FarmerHomepage';
-import AddInventory from './components/AddInventory';
+import AddInventory from './components/AddInventory/AddInventory';
 
 function App() {
 	return (
