@@ -32,7 +32,11 @@
 	color: #E5E5E5;
 }
 
-.initial-sign-in-page-section p {
+.initial-sign-in-page-section a {
+	text-decoration: none;
+}
+
+.initial-sign-in-page-section a p {
 	color: #E5E5E5;
 }
 
@@ -77,6 +81,10 @@
 	margin-bottom: 1.5rem;
 	font-size: 2rem;
 	color: #4D4D4D;
+}
+
+.farmer-and-shopper-sign-in-page-section a {
+	text-decoration: none;
 }
 
 .farmer-and-shopper-sign-in-page-section p {
