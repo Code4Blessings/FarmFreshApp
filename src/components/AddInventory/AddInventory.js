@@ -2,6 +2,7 @@ import React from "react";
 import { formik } from "formik";
 import Header from "../Header";
 import AddButton from "./images/add-button.png";
+import "./AddInventory.css";
 
 const AddInventory = () => {
    return (
@@ -12,21 +13,15 @@ const AddInventory = () => {
         <div className="add-inventory-title">
             <h1>Add/Inventory</h1>
         </div>
-        <div className="input-container">
-            <div className="quantity-input">
-                <input 
-                type="text"
-                placeholder="1" />
-            </div>
-            <div className="inventory-input">
-                <input 
+        <form className="inventory-form">
+            <input className="quantity-inventory"
+            type="text"
+            placeholder="1" />
+                <input className="inventory-input"
                 type="text"
                 placeholder="Item Name" />
-            </div>
-            <div className="add-btn">
-                <img src={AddButton} alt="plus button"/>
-            </div>
-        </div>
+            <button className="add-btn">+</button>
+        </form>
       </div>
 
    );
