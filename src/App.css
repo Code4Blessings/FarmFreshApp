@@ -18,25 +18,29 @@
 /* initial sign in page */
 .initial-sign-in-page-section {
 	height: 90vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	background-image: url('farmer.jpg');
 	background-size: cover;
 }
 
-.initial-sign-in-page-section h2 {
+.initial-sign-in-page-section div {
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.initial-sign-in-page-section div h2 {
 	margin-bottom: 1.5rem;
 	font-size: 2rem;
 	color: #E5E5E5;
 }
 
-.initial-sign-in-page-section a {
+.initial-sign-in-page-section div a {
 	text-decoration: none;
 }
 
-.initial-sign-in-page-section a p {
+.initial-sign-in-page-section div a p {
 	color: #E5E5E5;
 }
 

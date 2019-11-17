@@ -33,7 +33,8 @@ const FarmerCreateAccountPage = () => {
             <Header/>
             <section className='farmer-and-shopper-sign-in-page-section'>
                 <h2>Create an Account</h2>
-                {/* form will be specific to the page i think */}
+                
+				{/* form will be specific to the page i think */}
                 <Formik
 					initialValues = {{
 						username: '',
@@ -53,8 +54,8 @@ const FarmerCreateAccountPage = () => {
 					}}
 
 					validate = {validate}
-
-					render = {() => {
+				>
+					{() => {
 						return (
 							<Form className='form' autoComplete='off'>
 								<div className='input-container'>
@@ -69,11 +70,12 @@ const FarmerCreateAccountPage = () => {
 									<ErrorMessage name='password' component='div' className='error'/>
 								</div>
 
-								<button className='farmer-sign-in-button' type='submit'>Sign Up</button>
+								<button className='farmer-sign-in-button' type='submit'>Sign In</button>
 							</Form>
 						)
 					}}
-				/>
+				</Formik>
+
 				<Link to='/shopper/register'><p>Are you a shopper?</p></Link>
             </section>
         </div>
