@@ -33,8 +33,9 @@ const FarmerSignInPage = () => {
             <Header/>
             <section className='farmer-and-shopper-sign-in-page-section'>
                 <h2>Sign In</h2>
-                {/* form will be specific to the page i think */}
-                <Formik
+                
+				{/* form will be specific to the page i think */}
+				<Formik
 					initialValues = {{
 						username: '',
 						password: '',
@@ -53,8 +54,8 @@ const FarmerSignInPage = () => {
 					}}
 
 					validate = {validate}
-
-					render = {() => {
+				>
+					{() => {
 						return (
 							<Form className='form' autoComplete='off'>
 								<div className='input-container'>
@@ -73,7 +74,8 @@ const FarmerSignInPage = () => {
 							</Form>
 						)
 					}}
-				/>
+				</Formik>
+
                 <Link to='/farmer/register'><p>Create an Account</p></Link>
             </section>
         </div>
