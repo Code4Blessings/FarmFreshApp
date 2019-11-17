@@ -27,12 +27,12 @@ const validate = ({username, password}) => {
 	return errors;
 };
 
-const FarmerSignInPage = () => {
+const ShopperCreateAccountPage = () => {
     return (
         <div>
             <Header/>
             <section className='farmer-and-shopper-sign-in-page-section'>
-                <h2>Sign In</h2>
+                <h2>Create an Account</h2>
                 {/* form will be specific to the page i think */}
                 <Formik
 					initialValues = {{
@@ -69,15 +69,15 @@ const FarmerSignInPage = () => {
 									<ErrorMessage name='password' component='div' className='error'/>
 								</div>
 
-								<button className='farmer-sign-in-button' type='submit'>Sign In</button>
+								<button className='farmer-sign-in-button' type='submit'>Sign Up</button>
 							</Form>
 						)
 					}}
 				/>
-                <Link to='/farmer/register'><p>Create an Account</p></Link>
+                <Link to='/farmer/register'><p>Are you a farmer?</p></Link>
             </section>
         </div>
     )
 };
 
-export default FarmerSignInPage;
+export default ShopperCreateAccountPage;

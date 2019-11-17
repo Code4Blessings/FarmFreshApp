@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import Header from './Header';
 import {Formik, Form, Field, ErrorMessage} from 'formik'
 import axios from 'axios';
@@ -73,7 +74,7 @@ const ShopperSignInPage = () => {
 						)
 					}}
 				/>
-                <p>Create an Account</p>
+                <Link to='/shopper/register'><p>Create an Account</p></Link>
             </section>
         </div>
     )
