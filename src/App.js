@@ -4,6 +4,7 @@ import './App.css';
 import InitialSignInPage from './components/InitialSignInPage';
 import FarmerSignInPage from './components/FarmerSignInPage';
 import ShopperSignInPage from './components/ShopperSignInPage';
+import FarmerCreateAccountPage from './components/FarmerCreateAccountPage';
 import FarmerHomepage from './components/FarmerHomepage';
 
 function App() {
@@ -12,9 +13,9 @@ function App() {
 			<Route exact path='/' component={InitialSignInPage}/>
 			<Route path='/farmer/login' component={FarmerSignInPage}/>
 			<Route path='/shopper/login' component={ShopperSignInPage}/>
+			<Route path='/farmer/register' component={FarmerCreateAccountPage}/>
 			
 			{/* need to be built
-			<Route path='/farmer/createaccount' component={FarmerSignUpPage}/>
       		<Route path='/shopper/createaccount' component={ShopperSignUpPage}/> */}
       		
 			<Route path='/farmer/homepage' component={FarmerHomepage} />

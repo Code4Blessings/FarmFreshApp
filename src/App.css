@@ -26,6 +26,12 @@
 	background-size: cover;
 }
 
+.initial-sign-in-page-section h2 {
+	margin-bottom: 1.5rem;
+	font-size: 2rem;
+	color: #E5E5E5;
+}
+
 .initial-sign-in-page-section p {
 	color: #E5E5E5;
 }
