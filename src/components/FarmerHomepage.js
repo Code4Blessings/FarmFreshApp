@@ -8,7 +8,7 @@ const FarmerHomepage = () => {
             <Header />
             <div className="homepage-links">
                 <Link>View Orders</Link>
-                <Link>Add/Edit Inventory</Link>
+                <Link to='/farmer/add-inventory'>Add/Edit Inventory</Link>
             </div>
             <div className="homepage-links">
                 <Link>Add Upcoming Harvests</Link>
