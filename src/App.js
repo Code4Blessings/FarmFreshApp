@@ -19,8 +19,8 @@ function App() {
 			<Route path='/farmer/register' component={FarmerCreateAccountPage}/>
       		<Route path='/shopper/register' component={ShopperCreateAccountPage}/>
 			
-			<Route path='/farmer/homepage' component={FarmerHomepage} />
-			<Route path='/farmer/inventory' component={AddInventory} />
+			<Route exact path='/farmer/dashboard' component={FarmerHomepage} />
+			<Route path='/farmer/dashboard/inventory' component={AddInventory} />
 			
 		</>
 	);
