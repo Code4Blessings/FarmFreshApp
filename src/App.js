@@ -18,6 +18,7 @@ function App() {
 			<Route path='/shopper/login' component={ShopperSignInPage}/>
 			<Route path='/farmer/register' component={FarmerCreateAccountPage}/>
       		<Route path='/shopper/register' component={ShopperCreateAccountPage}/>
+			
 			<Route path='/farmer/homepage' component={FarmerHomepage} />
 			<Route path='/farmer/inventory' component={AddInventory} />
 			

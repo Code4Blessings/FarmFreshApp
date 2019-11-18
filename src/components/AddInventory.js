@@ -12,7 +12,7 @@ const AddInventory = () => {
                 <h2>Add/Edit Inventory</h2>
             
                 <form className="inventory-form">
-                    <input className="quantity-inventory" type="number" placeholder="1pc" maxLength='2'/>
+                    <input className="quantity-inventory" type="number" placeholder="1pc"/>
                     <input className="inventory-input" type="text" placeholder="Item Name"/>
                     <button className="add-btn">+</button>
                 </form>

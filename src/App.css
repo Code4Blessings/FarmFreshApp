@@ -156,7 +156,7 @@
 
 .inventory-container {
     max-width: 30rem;
-    height: 90vh;
+    height: 80vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -209,7 +209,8 @@
     color: #ffffff;
     border: none;
     border-radius: 0.5rem;
-    outline: none;
+	outline: none;
+	cursor: pointer;
 }
 
 .table {
@@ -228,7 +229,7 @@
 
 .table-contents {
     width: 100%;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     background: white;
 }
 
