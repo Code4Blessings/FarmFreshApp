@@ -8,14 +8,13 @@ const FarmerHomepage = () => {
             <Header />
             <div className="homepage-links">
                 <Link>View Orders</Link>
-                <Link to='/farmer/inventory'>Add/Edit Inventory</Link>
+                <Link to='/farmer/dashboard'>Add/Edit Inventory</Link>
             </div>
             <div className="homepage-links">
                 <Link>Add Upcoming Harvests</Link>
                 <Link>View Farm Profile</Link>
             </div>
         </div>
-        
     );
 }
 
