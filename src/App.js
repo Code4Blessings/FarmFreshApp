@@ -7,7 +7,7 @@ import ShopperSignInPage from './components/ShopperSignInPage';
 import FarmerCreateAccountPage from './components/FarmerCreateAccountPage';
 import ShopperCreateAccountPage from './components/ShopperCreateAccountPage';
 import FarmerHomepage from './components/FarmerHomepage';
-import AddInventory from './components/AddInventory/AddInventory';
+import AddInventory from './components/AddInventory';
 
 function App() {
 	return (
@@ -19,7 +19,7 @@ function App() {
 			<Route path='/farmer/register' component={FarmerCreateAccountPage}/>
       		<Route path='/shopper/register' component={ShopperCreateAccountPage}/>
 			<Route path='/farmer/homepage' component={FarmerHomepage} />
-			<Route path='/farmer/add-inventory' component={AddInventory} />
+			<Route path='/farmer/inventory' component={AddInventory} />
 			
 		</>
 	);
