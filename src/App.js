@@ -11,7 +11,7 @@ import FarmerHomepage from './components/FarmerHomepage';
 import FarmerEditInventory from './components/FarmerEditInventory';
 import {FarmerEditInventoryContext} from './components/contexts/FarmerEditInventoryContext';
 import PrivateRoute from './components/PrivateRoute';
-import ShopperTest from './components/ShopperTest';
+import ShopperHomepage from './components/ShopperHomepage';
 
 function App() {
 	return (
@@ -25,7 +25,7 @@ function App() {
 				<Route path='/farmer/register' component={FarmerCreateAccountPage}/>
 				<Route path='/shopper/register' component={ShopperCreateAccountPage}/>
 				
-				<PrivateRoute path='/shopper/dashboard' component={ShopperTest}/>
+				<PrivateRoute path='/shopper/dashboard' component={ShopperHomepage}/>
 				
 				<PrivateRoute path='/farmer/dashboard' component={FarmerHomepage}/>
 				<PrivateRoute path='/farmer/inventory' component={FarmerEditInventory}/>
