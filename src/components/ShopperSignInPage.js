@@ -46,8 +46,6 @@ const ShopperSignInPage = (props) => {
 							.then((response) => {
 								localStorage.setItem('token', response.data.token);
 								props.history.push('/shopper/login');
-								console.log(values);
-								console.log(response);
 								tools.resetForm();
 							})
 							.catch((error) => {
