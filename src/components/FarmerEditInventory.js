@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Header from './Header';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { axiosWithAuth } from '../utils/axiosWithAuth';
 // validating form
 const validate = ({ item_name, quantity }) => {
 	const errors = {};
@@ -40,8 +41,15 @@ const AddInventory = () => {
 						item_name : '',
 						quantity  : '',
 					}}
+					// deleteColor = {(item) => {
+					//     axiosWithAuth()
+					//         .delete(`/inventory/${item.id}`)
+					//         .then((res) => updateColors(item.filter((item) => item.id !== res.data)))
+					//         .catch((err) => console.log(err));
+					// }};
+
 					onSubmit={(values, tools) => {
-						axios
+						axiosWithAuth()
 							.post('https://reqres.in/api/users', values)
 							.then((response) => {
 								setInventory([ ...inventory, values ]);
