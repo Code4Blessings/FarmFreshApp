@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
 
 /* header */
 .header {
@@ -124,7 +124,7 @@
 	font-size: 14px;
 	color: #4D4D4D;
 }
-/*****************/
+
 .input-container input {
 	height: 46px;
 	width: 515px;
@@ -141,6 +141,7 @@
 	color: #C4C4C4;
 }
 
+/* added button spacing, might remove later, don't know how i feel about it */
 .button-spacing {
 	margin-top: 16px;
 }
@@ -152,27 +153,43 @@
 }
 
 /* farmer homepage */
-.homepage-links {
+.homepage-container {
+	max-width: 1050px;
+	height: 90vh;
+	margin: 0 auto;
 	display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-	width: 100%;
-	height: auto;
-	margin-top: 40px;
-	background-color: #E5E5E5;
+	flex-direction: column;
+	justify-content: center;
 }
 
- .homepage-links a {
-	background-color: #F7F7F8;
-	text-decoration: none;
-	color: #4D4D4D;
-	font-size: 30px;
-	text-align: center;
-	width: 500px;
+.homepage-container div:first-child {
+	margin-bottom: 50px;
+}
+
+.homepage-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.homepage-row a button {
 	height: 300px;
-	margin: 20px;
-	padding-top: 120px;
+	width: 500px;
+	background: #F7F7F8;
+	border: none;
 	box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.13);
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+	color: #4D4D4D;
+	cursor: pointer;
+}
+
+.log-out {
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	color: #FFFFFF;
+	position: absolute;
+	top: 32px;
+	right: 32px;
 }
 
 /********************************* INVENTORY PAGE **************************************************/

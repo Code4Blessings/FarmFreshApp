@@ -31,7 +31,7 @@ const AddInventory = () => {
 	return (
 		<div>
 			<Header />
-
+			<Link className='log-out' to='/' onClick={() => localStorage.removeItem('token')}>Log Out</Link>
 			<section className='inventory-container'>
 				<h2>Add/Edit Inventory</h2>
 
@@ -88,9 +88,6 @@ const AddInventory = () => {
 				</div>
 
 				<button className='farmer-sign-in-button'>Save Changes</button>
-				<Link to='/' onClick={() => localStorage.removeItem('token')}>
-					Logout
-				</Link>
 			</section>
 		</div>
 	);
