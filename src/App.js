@@ -10,6 +10,7 @@ import FarmerHomepage from './components/FarmerHomepage';
 import AddInventory from './components/AddInventory';
 import { AddInventoryContext } from './components/contexts/AddInventoryContext';
 import PrivateRoute from './components/PrivateRoute';
+import ShopperTest from './components/ShopperTest';
 
 function App() {
 	return (
@@ -24,6 +25,7 @@ function App() {
 			<Route path='/shopper/login' component={ShopperSignInPage}/>
 			<Route path='/farmer/register' component={FarmerCreateAccountPage}/>
       		<Route path='/shopper/register' component={ShopperCreateAccountPage}/>
+      		<Route path='/shopper/dashboard' component={ShopperTest}/>
 			
 
 			<PrivateRoute path='/farmer/dashboard' component={FarmerHomepage} />
