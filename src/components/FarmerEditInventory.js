@@ -61,9 +61,7 @@ const AddInventory = () => {
 								<Field className='inventory-input' name='item_name' type='text' placeholder='Item Name' />
 								<ErrorMessage name='item_name' component='div' className='error' />
 
-								<button className='add-btn' type='submit'>
-									+
-								</button>
+								<button className='add-btn' type='submit'>Add</button>
 							</Form>
 						);
 					}}
@@ -72,7 +70,7 @@ const AddInventory = () => {
 				<h2>Current Inventory</h2>
 
 				<div className='table'>
-					<p>Hello!!!!!!</p>
+					<p>Action</p>
 					<p>Item</p>
 					<p>Quantity</p>
 				</div>

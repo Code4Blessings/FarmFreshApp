@@ -195,7 +195,7 @@
 /********************************* INVENTORY PAGE **************************************************/
 
 .inventory-container {
-    max-width: 30rem;
+    max-width: 500px;
     height: 80vh;
     margin: 0 auto;
     display: flex;
@@ -205,8 +205,10 @@
 }
 
 .inventory-container h2 {
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
+    margin-bottom: 16px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+	font-weight: 500;
     color: #545454;
 }
 

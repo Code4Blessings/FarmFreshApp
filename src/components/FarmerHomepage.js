@@ -10,12 +10,12 @@ const FarmerHomepage = () => {
 			<div className='homepage-container'>
 				<div className='homepage-row'>
 					<Link><button>View Orders</button></Link>
-					<Link to='/farmer/dashboard/inventory'><button>Add/Edit Inventory</button></Link>
+					<Link to='/farmer/inventory'><button>Add/Edit Inventory</button></Link>
 				</div>
 				<div className='homepage-row'>
 					<Link><button>Add Upcoming Harvests</button></Link>
 					<Link><button>View Farm Profile</button></Link>
-				</div>	
+				</div>
 			</div>
 		</div>
 	);
