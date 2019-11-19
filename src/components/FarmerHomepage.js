@@ -1,12 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Header from './Header';
+import MenuButton from './MenuButton';
 
 const FarmerHomepage = () => {
 	return (
 		<div>
 			<Header/>
-			<Link className='log-out' to='/' onClick={() => localStorage.removeItem('token')}>Log Out</Link>
+			<MenuButton className="log-out"/>
 			<div className='homepage-container'>
 				<div className='homepage-row'>
 					<Link><button>View Orders</button></Link>
