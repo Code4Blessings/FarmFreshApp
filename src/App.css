@@ -313,15 +313,61 @@ input[type=number]::-webkit-outer-spin-button {
 /********************************* SHOPPER HOMEPAGE **************************************************/
 
 .shopper-homepage-container {
+	max-width: 515px;
 	height: 80vh;
+	margin: 0 auto;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
 .shopper-homepage-container h2 {
+	margin-bottom: 32px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 30px;
-	font-weight: 400;
+	font-weight: 500;
 	color: #4D4D4D;
+}
+
+.farm-container {
+	width: 100%;
+}
+
+.farm-row {
+	margin-bottom: 16px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.farm-row div:first-child h3{
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	color: #4D4D4D;
+}
+
+.farm-row div:first-child p{
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	color: #4D4D4D;
+}
+
+.farm-row div:last-child {
+	display: flex;
+	flex-direction: column;
+}
+
+.farm-row div:last-child p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	color: #4D4D4D;
+}
+
+.farm-row div:last-child a {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	color: #3d6600;
 }
