@@ -68,8 +68,8 @@ const FarmerCreateAccountPage = (props) => {
 									<ErrorMessage name='password' component='div' className='error' />
 								</div>
 
-								<button className='farmer-sign-in-button' type='submit'>
-									Sign In
+								<button className='farmer-sign-in-button button-spacing' type='submit'>
+									Sign Up
 								</button>
 							</Form>
 						);
@@ -77,7 +77,7 @@ const FarmerCreateAccountPage = (props) => {
 				</Formik>
 
 				<Link to='/shopper/register'>
-					<p>Are you a shopper?</p>
+					<p>Are you a shopper? Create an account here.</p>
 				</Link>
 			</section>
 		</div>
