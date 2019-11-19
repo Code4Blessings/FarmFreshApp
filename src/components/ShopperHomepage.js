@@ -17,8 +17,8 @@ const ShopperHomepage = () => {
 							<p>Oakland, CA 94606</p>
 						</div>
 						<div>
-							<p>Currently Available:</p>
-							<p>Pumpkins, Squash, Corn</p>
+							<p className='currently-available'>Currently Available:</p>
+							<p>Pumpkins</p>
 							<a href=''>view full inventory</a>
 						</div>
 					</div>
@@ -30,7 +30,7 @@ const ShopperHomepage = () => {
 						</div>
 						<div>
 							<p>Currently Available:</p>
-							<p>Pumpkins, Squash, Corn</p>
+							<p>Squash, Corn</p>
 							<a href=''>view full inventory</a>
 						</div>
 					</div>
@@ -42,12 +42,11 @@ const ShopperHomepage = () => {
 						</div>
 						<div>
 							<p>Currently Available:</p>
-							<p>Pumpkins, Squash, Corn</p>
+							<p>Tomatoes, and more!</p>
 							<a href=''>view full inventory</a>
 						</div>
 					</div>
 				</div>
-				<button className='farmer-sign-in-button button-spacing'>Next</button>
 			</div>
 		</div>
 	);
