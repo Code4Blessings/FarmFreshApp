@@ -17,9 +17,9 @@ const ShopperHomepage = () => {
 							<p>Oakland, CA 94606</p>
 						</div>
 						<div>
-							<p>Currently Available:</p>
-							<p>Pumpkins, Squash, Corn</p>
-							<a href=''>view full inventory</a>
+							<p className='currently-available'>Currently Available:</p>
+							<p>Pumpkins</p>
+							<Link to='/shopper/shane-farms'>view full inventory</Link>
 						</div>
 					</div>
 					<div className='farm-row'>
@@ -30,8 +30,8 @@ const ShopperHomepage = () => {
 						</div>
 						<div>
 							<p>Currently Available:</p>
-							<p>Pumpkins, Squash, Corn</p>
-							<a href=''>view full inventory</a>
+							<p>Squash, Corn</p>
+							<Link to='/shopper/shane-farms'>view full inventory</Link>
 						</div>
 					</div>
 					<div className='farm-row'>
@@ -42,12 +42,11 @@ const ShopperHomepage = () => {
 						</div>
 						<div>
 							<p>Currently Available:</p>
-							<p>Pumpkins, Squash, Corn</p>
-							<a href=''>view full inventory</a>
+							<p>Tomatoes, and more!</p>
+							<Link to='/shopper/shane-farms'>view full inventory</Link>
 						</div>
 					</div>
 				</div>
-				<button className='farmer-sign-in-button button-spacing'>Next</button>
 			</div>
 		</div>
 	);
