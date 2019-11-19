@@ -1,39 +1,38 @@
-import React from "react";
+import React from 'react';
+import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import "./MenuButton.css";
+import {Link} from 'react-router-dom';
+export default function MenuButton() {
+  const [anchorEl, setAnchorEl] = React.useState(null);
 
-const MenuButton = () => {
-    return (
-        <div classNameName="menu-wrapper">
-            <div classNameName="menu-btn">
-                <div className="btn-line"></div>
-                <div className="btn-line"></div>
-                <div className="btn-line"></div>
-            </div>
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget);
+  };
 
-            <nav className="menu">
-                <div className="menu-branding">
-                    <div className="portrait"></div>
-                </div>
-                <ul className="menu-nav">
-                    <li className="nav-item current">
-                        <a href="index.html" className="nav-link">Home
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="about.html" className="nav-link">About Me
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="work.html" className="nav-link">My Work
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="contact.html" className="nav-link">How To Reach Me
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    );
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  return (
+    <div>
+      <Button className="btn-line" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+       Account
+      </Button>
+      <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+      <Link to ='/'>
+        <MenuItem onClick={() => localStorage.removeItem('token')} >Logout</MenuItem>
+    </Link>
+       
+        
+      </Menu>
+    </div>
+  );
 }
-
-export default MenuButton;
