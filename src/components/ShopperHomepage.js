@@ -19,7 +19,7 @@ const ShopperHomepage = () => {
 						<div>
 							<p className='currently-available'>Currently Available:</p>
 							<p>Pumpkins</p>
-							<a href=''>view full inventory</a>
+							<Link to='/shopper/shane-farms'>view full inventory</Link>
 						</div>
 					</div>
 					<div className='farm-row'>
@@ -31,7 +31,7 @@ const ShopperHomepage = () => {
 						<div>
 							<p>Currently Available:</p>
 							<p>Squash, Corn</p>
-							<a href=''>view full inventory</a>
+							<Link to='/shopper/shane-farms'>view full inventory</Link>
 						</div>
 					</div>
 					<div className='farm-row'>
@@ -43,7 +43,7 @@ const ShopperHomepage = () => {
 						<div>
 							<p>Currently Available:</p>
 							<p>Tomatoes, and more!</p>
-							<a href=''>view full inventory</a>
+							<Link to='/shopper/shane-farms'>view full inventory</Link>
 						</div>
 					</div>
 				</div>
