@@ -301,13 +301,17 @@ input[type=number]::-webkit-outer-spin-button {
 /* play around with width percentage */
 .table-row {
     height: 50px;
-    width: 72.5%;
+    width: 75%;
 	margin: 0 auto;
 	font-family: 'Roboto', sans-serif;
 	color: #4D4D4D;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.fa-pen {
+	margin-right: 8px;
 }
 
 /********************************* SHOPPER HOMEPAGE **************************************************/
@@ -335,9 +339,13 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .farm-row {
+	background: #FFFFFF;
 	margin-bottom: 16px;
+	padding: 16px;
+	border-radius: 5px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .farm-row div:first-child h3{
@@ -350,7 +358,7 @@ input[type=number]::-webkit-outer-spin-button {
 .farm-row div:first-child p{
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
-	font-weight: 500;
+	font-weight: 400;
 	color: #4D4D4D;
 }
 
@@ -362,8 +370,11 @@ input[type=number]::-webkit-outer-spin-button {
 .farm-row div:last-child p {
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
-	font-weight: 500;
 	color: #4D4D4D;
+}
+
+.farm-row div:last-child p:first-child {
+	font-weight: 500;
 }
 
 .farm-row div:last-child a {

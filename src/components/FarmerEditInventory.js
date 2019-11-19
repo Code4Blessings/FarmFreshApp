@@ -86,7 +86,10 @@ const AddInventory = () => {
 				<div className='table-contents'>
 					{inventory.map((iteration, index) => (
 						<div className='table-row' key={index}>
-							<p><i class="fas fa-trash"></i></p>
+							<span>
+								<i class="fas fa-pen"></i>
+								<i class="fas fa-trash"></i>
+							</span>
 							<p>{iteration.item_name}</p>
 							<p>{iteration.quantity}</p>
 						</div>
