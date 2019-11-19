@@ -2,6 +2,7 @@ import React from 'react';
 import {Route} from "react-router-dom";
 import './App.css';
 import InitialSignInPage from './components/InitialSignInPage';
+import InitialCreateAccountPage from './components/InitialCreateAccountPage';
 import FarmerSignInPage from './components/FarmerSignInPage';
 import ShopperSignInPage from './components/ShopperSignInPage';
 import FarmerCreateAccountPage from './components/FarmerCreateAccountPage';
@@ -17,6 +18,7 @@ function App() {
 		<>
 			<FarmerEditInventoryContext.Provider>
 				<Route exact path='/' component={InitialSignInPage}/>
+				<Route path='/register' component={InitialCreateAccountPage}/>
 				
 				<Route path='/farmer/login' component={FarmerSignInPage}/>
 				<Route path='/shopper/login' component={ShopperSignInPage}/>

@@ -55,13 +55,13 @@ const AddInventory = () => {
 					{() => {
 						return (
 							<Form className='inventory-form' autoComplete='off'>
-								<Field className='quantity-inventory' name='quantity' type='number' placeholder='1' />
-								<ErrorMessage name='quantity' component='div' className='error' />
-
-								<Field className='inventory-input' name='item_name' type='text' placeholder='Item Name' />
-								<ErrorMessage name='item_name' component='div' className='error' />
-
-								<button className='add-btn' type='submit'>Add</button>
+								<div>
+									<Field className='quantity-input' name='quantity' type='number' placeholder='1' />
+									<Field className='item-name-input' name='item_name' type='text' placeholder='Item Name' />
+									<button className='add-button' type='submit'>Add</button>
+								</div>
+								<ErrorMessage name='quantity' component='div' className='inventory-error' />
+								<ErrorMessage name='item_name' component='div' className='inventory-error' />
 							</Form>
 						);
 					}}
@@ -78,7 +78,7 @@ const AddInventory = () => {
 				<div className='table-contents'>
 					{inventory.map((iteration, index) => (
 						<div className='table-row' key={index}>
-							<p>edit</p>
+							<p><i class="fas fa-trash"></i></p>
 							<p>{iteration.item_name}</p>
 							<p>{iteration.quantity}</p>
 						</div>

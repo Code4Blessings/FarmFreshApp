@@ -77,7 +77,7 @@ const FarmerCreateAccountPage = (props) => {
 				</Formik>
 
 				<Link to='/shopper/register'>
-					<p>Are you a shopper?</p>
+					<p>Are you a shopper? Create an account here.</p>
 				</Link>
 			</section>
 		</div>
