@@ -25,9 +25,11 @@ function App() {
 			<Route path='/farmer/register' component={FarmerCreateAccountPage}/>
       		<Route path='/shopper/register' component={ShopperCreateAccountPage}/>
 			
-			<PrivateRoute path='/farmer/homepage' component={FarmerHomepage} />
-			<PrivateRoute path='/farmer/inventory' component={AddInventory} />
-			</AddInventoryContext.Provider>
+
+			<PrivateRoute path='/farmer/dashboard' component={FarmerHomepage} />
+			<PrivateRoute path='/farmer/dashboard/inventory' component={AddInventory} />
+					</AddInventoryContext.Provider>
+
 		</>
 	);
 }
