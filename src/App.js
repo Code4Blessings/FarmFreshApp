@@ -23,7 +23,7 @@ function App() {
 			<Route path='/shopper/login' component={ShopperSignInPage}/>
 			<Route path='/farmer/register' component={FarmerCreateAccountPage}/>
       		<Route path='/shopper/register' component={ShopperCreateAccountPage}/>
-      		<Route path='/shopper/dashboard' component={ShopperTest}/>
+      		<PrivateRoute path='/shopper/dashboard' component={ShopperTest}/>
 			
 
 			<PrivateRoute exact path='/farmer/dashboard' component={FarmerHomepage} />
