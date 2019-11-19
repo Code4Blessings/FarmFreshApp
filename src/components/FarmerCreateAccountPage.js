@@ -68,8 +68,8 @@ const FarmerCreateAccountPage = (props) => {
 									<ErrorMessage name='password' component='div' className='error' />
 								</div>
 
-								<button className='farmer-sign-in-button' type='submit'>
-									Sign In
+								<button className='farmer-sign-in-button button-spacing' type='submit'>
+									Sign Up
 								</button>
 							</Form>
 						);
