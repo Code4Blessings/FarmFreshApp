@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Link} from "react-router-dom";
+import {Route} from "react-router-dom";
 import './App.css';
 import InitialSignInPage from './components/InitialSignInPage';
 import FarmerSignInPage from './components/FarmerSignInPage';
@@ -16,9 +16,7 @@ function App() {
 	return (
 		<>
 		<AddInventoryContext.Provider>
-		<Link to='/' onClick={() => localStorage.removeItem('token')}>
-						Logout
-					</Link>
+		
 			<Route exact path='/' component={InitialSignInPage}/>
 			
 			<Route path='/farmer/login' component={FarmerSignInPage}/>
@@ -28,9 +26,9 @@ function App() {
       		<Route path='/shopper/dashboard' component={ShopperTest}/>
 			
 
-			<PrivateRoute path='/farmer/dashboard' component={FarmerHomepage} />
+			<PrivateRoute exact path='/farmer/dashboard' component={FarmerHomepage} />
 			<PrivateRoute path='/farmer/dashboard/inventory' component={AddInventory} />
-					</AddInventoryContext.Provider>
+		</AddInventoryContext.Provider>
 
 		</>
 	);

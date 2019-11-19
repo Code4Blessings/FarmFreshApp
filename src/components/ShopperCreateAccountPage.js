@@ -2,9 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import axios from 'axios';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
-import { tsPropertySignature } from '@babel/types';
 
 // validating form
 const validate = ({ username, password }) => {
@@ -48,8 +46,6 @@ const ShopperCreateAccountPage = (props) => {
 							.then((response) => {
 								localStorage.setItem('token', response.data.token);
 								props.history.push('/shopper/login');
-								console.log(values);
-								console.log(response);
 								tools.resetForm();
 							})
 							.catch((error) => {

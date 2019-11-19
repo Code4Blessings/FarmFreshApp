@@ -44,11 +44,8 @@ const FarmerSignInPage = (props) => {
 						axiosWithAuth()
 							.post('/farmers/login', values)
 							.then((response) => {
-								// console.log(response);
 								localStorage.setItem('token', response.data.token);
-								props.history.push('/farmer/homepage');
-								console.log(values);
-								console.log(response);
+								props.history.push('/farmer/dashboard');
 								tools.resetForm();
 							})
 							.catch((error) => {

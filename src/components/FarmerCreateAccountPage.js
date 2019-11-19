@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import axios from 'axios';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 
 // validating form
@@ -46,9 +45,7 @@ const FarmerCreateAccountPage = (props) => {
 							.post('/farmers/register', values)
 							.then((response) => {
 								localStorage.setItem('token', response.data.token);
-								props.history.push('/farmer/homepage');
-								console.log(values);
-								console.log(response);
+								props.history.push('/farmer/dashboard');
 								tools.resetForm();
 							})
 							.catch((error) => {
