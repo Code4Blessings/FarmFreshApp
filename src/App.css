@@ -301,13 +301,17 @@ input[type=number]::-webkit-outer-spin-button {
 /* play around with width percentage */
 .table-row {
     height: 50px;
-    width: 72.5%;
+    width: 75%;
 	margin: 0 auto;
 	font-family: 'Roboto', sans-serif;
 	color: #4D4D4D;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.fa-pen {
+	margin-right: 8px;
 }
 
 /********************************* SHOPPER HOMEPAGE **************************************************/
