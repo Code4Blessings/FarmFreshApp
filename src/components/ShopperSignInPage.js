@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
 import { Formik, Form, Field } from 'formik';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 
 const ShopperSignInPage = (props) => {
-	const [error, setError] = useState('');
-	
+	const [ error, setError ] = useState('');
+
 	return (
 		<div>
 			<Header />
@@ -31,10 +31,9 @@ const ShopperSignInPage = (props) => {
 								console.log(error);
 								if (error) {
 									setError('Wrong email or password');
-								};
+								}
 							});
-					}}
-				>
+					}}>
 					{() => {
 						return (
 							<Form className='form' autoComplete='off'>
@@ -47,7 +46,7 @@ const ShopperSignInPage = (props) => {
 									<Field name='password' type='password' placeholder='Enter Password' />
 									<p className='sign-in-error'>{error}</p>
 								</div>
-								
+
 								<button className='farmer-sign-in-button button-spacing' type='submit'>
 									Sign In
 								</button>

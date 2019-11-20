@@ -28,15 +28,27 @@ const validate = ({ item_name, quantity }) => {
 
 const AddInventory = () => {
 	const [ inventory, setInventory ] = useState([]);
+	const [ editing, setEditing ] = useState(false);
+	const [ lineItem, setLineItem ] = useState({});
+
+	const editRow = (item) => {
+		setEditing(true);
+		setLineItem({
+			...item,
+		});
+	};
+
 	const fetchInventory = () => {
 		axiosWithAuth().get('/inventory').then((response) => {
 			setInventory(response.data);
 			console.log(response);
 		});
 	};
+
 	useEffect(() => {
 		fetchInventory();
 	}, []);
+
 	const deleteItem = (id) => {
 		axiosWithAuth()
 			.delete(`/inventory/${id}`)
@@ -46,17 +58,28 @@ const AddInventory = () => {
 			})
 			.catch((err) => console.log(err));
 	};
-	const UpdateItem = (id) => {
+
+	const changeLineItem = (event) => {
+		console.log(event.target.name, event.target.value);
+		setLineItem({
+			...lineItem,
+			[event.target.name]: event.target.value,
+		});
+	};
+
+	const UpdateItem = () => {
+		setEditing(false);
 		axiosWithAuth()
-			.put(`/inventory/${id}`)
-			.then((res) => {
-				console.log(res.data);
+			.put(`/inventory/${lineItem.id}`, lineItem)
+			.then(() => {
+				fetchInventory();
 			})
 			.catch((err) => console.log(err));
 	};
+
 	return (
 		<div>
-			<HeaderWithLogOut/>
+			<HeaderWithLogOut />
 			<section className='inventory-container'>
 				<h2>Add/Edit Inventory</h2>
 
@@ -107,26 +130,31 @@ const AddInventory = () => {
 				</div>
 
 				<div className='table-contents'>
-					{inventory.map((iteration, index) => (
-						<div className='table-row' key={index}>
+					{inventory.map((item, index) => (
+						<form className='table-row' key={index}>
 							<span>
-								<i onClick={() => UpdateItem(iteration.id)} className='fas fa-pen' />
-								<i onClick={() => deleteItem(iteration.id)} className='fas fa-trash' />
+								<i onClick={() => editRow(item)} className='fas fa-pen' />
+								<i onClick={() => deleteItem(item.id)} className='fas fa-trash' />
 							</span>
-							<p>{iteration.item}</p>
-							<p>{iteration.quantity}</p>
-						</div>
+							{editing && item.id === lineItem.id ? (
+								<input name='item' placeholder='item' value={lineItem.item} onChange={changeLineItem} />
+							) : (
+								<p>{item.item}</p>
+							)}
+							{editing && item.id === lineItem.id ? (
+								<input name='quantity' placeholder='quantity' value={lineItem.quantity} onChange={changeLineItem} />
+							) : (
+								<p>{item.quantity}</p>
+							)}
+						</form>
 					))}
 				</div>
 
-				<button className='farmer-sign-in-button'>Save Changes</button>
-
-				{/* <form onSubmit={UpdateItem}>
-					<label>
-						Edit:
-						<input onChange={(e) => setInventory({ ...inventory, item: e.target.value })} value={inventory.item} />
-					</label>
-				</form> */}
+				{editing && (
+					<button className='farmer-sign-in-button' onClick={UpdateItem}>
+						Save Changes
+					</button>
+				)}
 			</section>
 		</div>
 	);
