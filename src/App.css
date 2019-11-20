@@ -26,15 +26,22 @@
 	height: 10vh;
 	background: #3d6600;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 }
 
-.header-with-log-out a {
+.header-with-log-out div {
+	width: 1050px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-with-log-out div a {
 	text-decoration: none;
 }
 
-.header-with-log-out a h1 {
+.header-with-log-out div a h1 {
 	font-family: 'Roboto', sans-serif;
 	font-size: 30px;
 	font-weight: 400;
