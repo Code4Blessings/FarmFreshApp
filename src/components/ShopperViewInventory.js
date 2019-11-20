@@ -4,17 +4,16 @@ import HeaderWithLogOut from './HeaderWithLogOut';
 import {axiosWithAuth} from '../utils/axiosWithAuth';
 
 const ShopperViewInventory = () => {
-	const [ products, setProducts ] = useState([]);
+	const [products, setProducts] = useState([]);
 	const params = useParams();
-	console.log(params);
-
+	
+	// get request stores data, specific farm's inventory, in state
 	useEffect(() => {
 		const fetchProducts = (id) => {
 			axiosWithAuth()
 				.get(`/inventory/${params.id}`)
 				.then((response) => {
 					setProducts(response.data);
-					console.log(response.data);
 				})
 				.catch((error) => {
 					console.error(error);
@@ -22,11 +21,12 @@ const ShopperViewInventory = () => {
 		};
 		fetchProducts();
 	}, []);
-	// get request will store data in state, i think, and disburse that data everywhere in this file
+	
 	return (
 		<div>
 			<HeaderWithLogOut />
 			<div className='shopper-view-inventory-container'>
+				<Link to='/shopper/dashboard'>go back</Link>
 				<h2>Choose Your Products</h2>
 				{products.map((item, index) => {
 					return (
@@ -38,7 +38,7 @@ const ShopperViewInventory = () => {
 						</div>
 					);
 				})}
-				<Link to='/shopper/dashboard'>go back</Link>
+				
 				{/* <h2>Shane Farms</h2>
 				<h3>1122 Redwood Ave. Oakland, CA 94606</h3> */}
 				{/* <div className='products'>
@@ -71,7 +71,7 @@ const ShopperViewInventory = () => {
 				{/* </div>
 					</div>
 				</div> */}
-				<button className='farmer-sign-in-button'>Order</button>
+				<button className='farmer-sign-in-button'>Place Order</button>
 			</div>
 		</div>
 	);

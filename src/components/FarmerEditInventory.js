@@ -3,6 +3,7 @@ import {Formik, Form, Field, ErrorMessage} from 'formik';
 import {Link} from 'react-router-dom';
 import {axiosWithAuth} from '../utils/axiosWithAuth';
 import HeaderWithLogOut from './HeaderWithLogOut';
+import GoBackButton from './GoBackButton';
 
 // validating form
 const validate = ({item_name, quantity}) => {
@@ -42,7 +43,6 @@ const AddInventory = () => {
 	const fetchInventory = () => {
 		axiosWithAuth().get('/inventory').then((response) => {
 			setInventory(response.data);
-			console.log(response);
 		});
 	};
 
@@ -81,7 +81,10 @@ const AddInventory = () => {
 	return (
 		<div>
 			<HeaderWithLogOut/>
-			<section className='inventory-container'>
+			
+			<GoBackButton/>
+			
+			<section className='inventory-container'>	
 				<h2>Add/Edit Inventory</h2>
 
 				<Formik

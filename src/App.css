@@ -536,3 +536,24 @@ input[type=number]::-webkit-outer-spin-button {
 .product-row div p:first-child {
 	font-weight: 500;
 }
+
+/**************** go back button ****************/
+
+.go-back-container {
+	width: 515px;
+	margin: 0 auto;
+	margin-top: 16px;
+}
+
+.go-back-container i {
+	margin-right: 5px;
+	font-size: 18px;
+	color: #3D6600;
+}
+
+.go-back-container a {
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	color: #3D6600;
+}
