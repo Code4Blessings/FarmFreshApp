@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import pumpkin from '../pumpkin.png';
+import React, {useState, useEffect} from 'react';
+import {Link, useParams} from 'react-router-dom';
 import HeaderWithLogOut from './HeaderWithLogOut';
-import { axiosWithAuth } from '../utils/axiosWithAuth';
+import {axiosWithAuth} from '../utils/axiosWithAuth';
 
 const ShopperViewInventory = () => {
 	const [ products, setProducts ] = useState([]);
