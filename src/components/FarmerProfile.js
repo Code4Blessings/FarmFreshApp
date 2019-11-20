@@ -1,17 +1,16 @@
 import React from "react";
 import Header from "./Header";
-import { Link } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 // validating form
-const validate = ({ farmName, address }) => {
+const validate = ({ farm_name, address }) => {
 	const errors = {};
 
 	// validating Farm Name
-	if (!farmName) {
-		errors.farmName = 'Please enter the name of your farm';
-	} else if (farmName.length < 4) {
-		errors.farmName = 'Your name must have two characters or more';
+	if (!farm_name) {
+		errors.farm_name = 'Please enter the name of your farm';
+	} else if (farm_name.length < 4) {
+		errors.farm_name = 'Your name must have two characters or more';
 	}
 
 	// validating Address
@@ -35,7 +34,7 @@ const FarmerProfile = () => {
 				{/* form will be specific to the page i think */}
 				<Formik
 					initialValues={{
-						farmName : '',
+						farm_name : '',
 						address : '',
 					}}
 					
@@ -44,9 +43,9 @@ const FarmerProfile = () => {
 						return (
 							<Form className='form' autoComplete='off'>
 								<div className='input-container'>
-									<label htmlFor='farmName'>Farm Name</label>
-									<Field name='farmName' type='text' placeholder='Enter the name of your farm' />
-									<ErrorMessage name='farmName' component='div' className='error' />
+									<label htmlFor='farm_name'>Farm Name</label>
+									<Field name='farm_name' type='text' placeholder='Enter the name of your farm' />
+									<ErrorMessage name='farm_name' component='div' className='error' />
 								</div>
 
 								<div className='input-container'>

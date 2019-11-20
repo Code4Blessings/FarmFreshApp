@@ -1,6 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
+import HeaderWithLogOut from './HeaderWithLogOut';
+
 
 const ShopperHomepage = () => {
 	const [ farms, setFarms ] = useState([]);
@@ -22,6 +25,8 @@ const ShopperHomepage = () => {
 
 	return (
 		<div>
+			<HeaderWithLogOut/>
+			{/* log out button needed here */}
 			<div className='shopper-homepage-container'>
 				<h2>Choose Your Farm:</h2>
 				<div className='farm-container'>

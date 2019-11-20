@@ -20,6 +20,42 @@
 	color: #FFFFFF;
 }
 
+/* header with log out */
+
+.header-with-log-out {
+	height: 10vh;
+	background: #3d6600;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.header-with-log-out a {
+	text-decoration: none;
+}
+
+.header-with-log-out a h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+	color: #FFFFFF;
+}
+
+.log-out-button {
+	padding: 0.75rem 1.5rem;
+	background: #FFFFFF;
+	border: none;
+	border-radius: 5px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	color: #202020;
+	cursor: pointer;
+}
+
+.log-out-button:hover {
+	opacity: 0.9;
+}
+
 /* initial sign in page */
 .initial-sign-in-page-section {
 	height: 90vh;
@@ -102,6 +138,12 @@
 	text-decoration: none;
 }
 
+/* for some reason i need an important tag, maybe look into? something to do with specificity */
+.sign-in-error {
+	font-size: 14px !important;
+	color: red !important;
+}
+
 .farmer-and-shopper-sign-in-page-section p {
 	font-family: 'Roboto', sans-serif;
 	color: #3d6600;
@@ -181,15 +223,6 @@
 	font-size: 30px;
 	color: #4D4D4D;
 	cursor: pointer;
-}
-
-.log-out {
-	text-decoration: none;
-	font-family: 'Roboto', sans-serif;
-	color: #FFFFFF;
-	position: absolute;
-	top: 32px;
-	right: 32px;
 }
 
 /********************************* FARMER INVENTORY PAGE **************************************************/
