@@ -151,7 +151,7 @@ const AddInventory = () => {
 				</div>
 
 				{editing && (
-					<button className='farmer-sign-in-button' onClick={UpdateItem}>
+					<button className='save-changes-button' onClick={UpdateItem}>
 						Save Changes
 					</button>
 				)}
