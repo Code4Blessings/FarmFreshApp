@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Header from './Header';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
+
 // validating form
 const validate = ({ item_name, quantity }) => {
 	const errors = {};
@@ -28,7 +28,32 @@ const validate = ({ item_name, quantity }) => {
 
 const AddInventory = () => {
 	const [ inventory, setInventory ] = useState([]);
-
+	const fetchInventory = () => {
+		axiosWithAuth().get('/inventory').then((response) => {
+			setInventory(response.data);
+			console.log(response);
+		});
+	};
+	useEffect(() => {
+		fetchInventory();
+	}, []);
+	const deleteItem = (id) => {
+		axiosWithAuth()
+			.delete(`/inventory/${id}`)
+			.then((response) => {
+				fetchInventory();
+				console.log(deleteItem);
+			})
+			.catch((err) => console.log(err));
+	};
+	const UpdateItem = (id) => {
+		axiosWithAuth()
+			.put(`/inventory/${id}`)
+			.then((res) => {
+				console.log(res.data);
+			})
+			.catch((err) => console.log(err));
+	};
 	return (
 		<div>
 			<Header />
@@ -43,18 +68,15 @@ const AddInventory = () => {
 						item_name : '',
 						quantity  : '',
 					}}
-					// deleteItem = {(item) => {
-					//     axiosWithAuth()
-					//         .delete(`/inventory/${item.id}`)
-					//         .then((res) => updateColors(item.filter((item) => item.id !== res.data)))
-					//         .catch((err) => console.log(err));
-					// }};
-
 					onSubmit={(values, tools) => {
+						const payload = {
+							item     : values.item_name,
+							quantity : Number(values.quantity),
+						};
 						axiosWithAuth()
-							.post('https://reqres.in/api/users', values)
+							.post('/inventory', payload)
 							.then((response) => {
-								setInventory([ ...inventory, values ]);
+								fetchInventory();
 								tools.resetForm();
 							})
 							.catch((error) => {
@@ -91,16 +113,23 @@ const AddInventory = () => {
 					{inventory.map((iteration, index) => (
 						<div className='table-row' key={index}>
 							<span>
-								<i class="fas fa-pen"></i>
-								<i class="fas fa-trash"></i>
+								<i onClick={() => UpdateItem(iteration.id)} className='fas fa-pen' />
+								<i onClick={() => deleteItem(iteration.id)} className='fas fa-trash' />
 							</span>
-							<p>{iteration.item_name}</p>
+							<p>{iteration.item}</p>
 							<p>{iteration.quantity}</p>
 						</div>
 					))}
 				</div>
 
 				<button className='farmer-sign-in-button'>Save Changes</button>
+
+				{/* <form onSubmit={UpdateItem}>
+					<label>
+						Edit:
+						<input onChange={(e) => setInventory({ ...inventory, item: e.target.value })} value={inventory.item} />
+					</label>
+				</form> */}
 			</section>
 		</div>
 	);
