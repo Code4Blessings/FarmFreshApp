@@ -2,12 +2,13 @@ import React from 'react';
 import Header from './Header';
 import {Link} from 'react-router-dom';
 import pumpkin from '../pumpkin.png';
+import HeaderWithLogOut from './HeaderWithLogOut';
 
 const ShopperViewInventory = () => {
     // get request will store data in state, i think, and disburse that data everywhere in this file
     return (
         <div>
-            <Header/>
+            <HeaderWithLogOut/>
             <div className='shopper-view-inventory-container'>
                 <Link to='/shopper/dashboard'>go back</Link>
                 <h2>Shane Farms</h2>
