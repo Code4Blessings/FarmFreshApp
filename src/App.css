@@ -348,6 +348,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 .fa-pen {
 	margin-right: 8px;
+	cursor: pointer;
+}
+
+.fa-trash {
+	cursor: pointer;
 }
 
 .save-changes-button {
