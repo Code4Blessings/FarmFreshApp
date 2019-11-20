@@ -13,7 +13,7 @@ const FarmerHomepage = () => {
 				</div>
 				<div className='homepage-row'>
 					<Link to='#'><button>Add Upcoming Harvests</button></Link>
-					<Link to='/farmer/profile'><button>View Farm Profile</button></Link>
+					<Link to='/farmer/profile'><button>Farm Profile</button></Link>
 				</div>
 			</div>
 		</div>
