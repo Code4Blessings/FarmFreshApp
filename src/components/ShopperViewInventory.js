@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Link, useParams} from 'react-router-dom';
 import HeaderWithLogOut from './HeaderWithLogOut';
 import {axiosWithAuth} from '../utils/axiosWithAuth';
+import ShopperGoBackButton from './ShopperGoBackButton';
 
 const ShopperViewInventory = () => {
 	const [products, setProducts] = useState([]);
@@ -24,10 +25,11 @@ const ShopperViewInventory = () => {
 	
 	return (
 		<div>
-			<HeaderWithLogOut />
+			<HeaderWithLogOut/>
+			<ShopperGoBackButton/>
 			<div className='shopper-view-inventory-container'>
-				<Link to='/shopper/dashboard'>go back</Link>
 				<h2>Choose Your Products</h2>
+				
 				{products.map((item, index) => {
 					return (
 						<div className='products'>

@@ -537,12 +537,16 @@ input[type=number]::-webkit-outer-spin-button {
 	font-weight: 500;
 }
 
-/**************** go back button ****************/
+/**************** go back button component ****************/
 
 .go-back-container {
 	width: 515px;
 	margin: 0 auto;
 	margin-top: 16px;
+}
+
+.go-back-container:hover {
+	opacity: 0.9;
 }
 
 .go-back-container i {

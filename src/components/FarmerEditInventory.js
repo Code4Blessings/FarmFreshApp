@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {Formik, Form, Field, ErrorMessage} from 'formik';
-import {Link} from 'react-router-dom';
 import {axiosWithAuth} from '../utils/axiosWithAuth';
 import HeaderWithLogOut from './HeaderWithLogOut';
-import GoBackButton from './GoBackButton';
+import FarmerGoBackButton from './FarmerGoBackButton';
 
 // validating form
 const validate = ({item_name, quantity}) => {
@@ -82,7 +81,7 @@ const AddInventory = () => {
 		<div>
 			<HeaderWithLogOut/>
 			
-			<GoBackButton/>
+			<FarmerGoBackButton/>
 			
 			<section className='inventory-container'>	
 				<h2>Add/Edit Inventory</h2>
