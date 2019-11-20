@@ -4,6 +4,8 @@ import Header from './Header';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
+import HeaderWithLogOut from './HeaderWithLogOut';
+
 // validating form
 const validate = ({ item_name, quantity }) => {
 	const errors = {};
@@ -31,10 +33,7 @@ const AddInventory = () => {
 
 	return (
 		<div>
-			<Header />
-			<Link className='log-out' to='/' onClick={() => localStorage.removeItem('token')}>
-				Log Out
-			</Link>
+			<HeaderWithLogOut/>
 			<section className='inventory-container'>
 				<h2>Add/Edit Inventory</h2>
 

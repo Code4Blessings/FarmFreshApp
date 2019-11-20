@@ -32,7 +32,6 @@ function App() {
 				<PrivateRoute path='/farmer/dashboard' component={FarmerHomepage}/>
 				<PrivateRoute path='/farmer/inventory' component={FarmerEditInventory}/>
 			</FarmerEditInventoryContext.Provider>
-
 		</>
 	);
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Header from './Header';
+import HeaderWithLogOut from './HeaderWithLogOut';
 
 const ShopperHomepage = () => {
 	return (
 		<div>
-			<Header/>
+			<HeaderWithLogOut/>
 			{/* log out button needed here */}
 			<div className='shopper-homepage-container'>
 				<h2>Choose Your Farm:</h2>
