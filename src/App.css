@@ -225,6 +225,7 @@
 	font-size: 30px;
 	color: #4D4D4D;
 	cursor: pointer;
+	outline: none;
 }
 
 /********************************* FARMER INVENTORY PAGE **************************************************/
