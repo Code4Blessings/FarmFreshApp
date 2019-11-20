@@ -31,7 +31,7 @@ function App() {
 				
 				
 				<PrivateRoute path='/shopper/dashboard' component={ShopperHomepage}/>
-				<PrivateRoute path='/shopper/shane-farms' component={ShopperViewInventory}/>
+				<PrivateRoute path='/shopper/farm/:id' component={ShopperViewInventory}/>
 				
 				<PrivateRoute path='/farmer/dashboard' component={FarmerHomepage}/>
 				<PrivateRoute path='/farmer/inventory' component={FarmerEditInventory}/>
