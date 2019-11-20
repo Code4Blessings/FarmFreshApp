@@ -1,9 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 import HeaderWithLogOut from './HeaderWithLogOut';
-
 
 const ShopperHomepage = () => {
 	const [ farms, setFarms ] = useState([]);
@@ -25,7 +23,7 @@ const ShopperHomepage = () => {
 
 	return (
 		<div>
-			<HeaderWithLogOut/>
+			<HeaderWithLogOut />
 			{/* log out button needed here */}
 			<div className='shopper-homepage-container'>
 				<h2>Choose Your Farm:</h2>
@@ -41,7 +39,7 @@ const ShopperHomepage = () => {
 								<div>
 									<p>Currently Available:</p>
 									<p>Squash, Corn</p>
-									<Link to='/shopper/shane-farms'>view full inventory</Link>
+									<Link to={`/shopper/farm/${iteration.id}`}>view full inventory</Link>
 									{/* need to create dynamic link */}
 								</div>
 							</div>
