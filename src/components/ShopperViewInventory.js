@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom';
 import HeaderWithLogOut from './HeaderWithLogOut';
 import {axiosWithAuth} from '../utils/axiosWithAuth';
 import ShopperGoBackButton from './ShopperGoBackButton';
-import unavailable from '../fruits and vegetables/not-available.png';
+import images from '../images.json';
 
 const ShopperViewInventory = (props) => {
 	const [products, setProducts] = useState([]);
@@ -35,44 +35,17 @@ const ShopperViewInventory = (props) => {
 					{products.map((item, index) => {
 						return (
 							<div className='product-row' key={index}>
-								<img src={unavailable} alt='unavailable'/>
+								<img src='https://i.imgur.com/OzziK4D.png' alt='produce'/>
 								<div>
 									<p>{item.item}</p>
 									<p>Available: {item.quantity} units</p>
-									<p>Quantity:</p>
-									<input type='number'></input>
+									<input className='edit-quantity-input' type='number'></input>
 								</div>
 							</div>
 						);
 					})}
-					<div className='product-row'>
-						<img src={unavailable} alt='unavailable'/>
-						<div>
-							<p>Apple</p>
-							<p>Available: 99 units</p>
-							<p>Quantity:</p>
-						</div>
-					</div>
-					<div className='product-row'>
-						<img src={unavailable} alt='unavailable'/>
-						<div>
-							<p>Carrots</p>
-							<p>Available: 80 units</p>
-							<p>Quantity:</p>
-						</div>
-					</div>
-					<div className='product-row'>
-						<img src={unavailable} alt='unavailable'/>
-						<div>
-							<p>Carrots</p>
-							<p>Available: 80 units</p>
-							<p>Quantity:</p>
-						</div>
-					</div>
 				</form>
-
 				<button className='farmer-sign-in-button'>Place Order</button>
-			
 			</div>
 		</div>
 	);
