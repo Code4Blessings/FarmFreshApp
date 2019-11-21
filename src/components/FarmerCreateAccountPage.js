@@ -7,6 +7,7 @@ import { axiosWithAuth } from '../utils/axiosWithAuth';
 // validating form
 const validate = ({ username, password }) => {
 	const errors = {};
+	// const { errors } = useContext(FarmerEditInventoryContext);
 
 	// validating username
 	if (!username) {

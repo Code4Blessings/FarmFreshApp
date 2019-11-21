@@ -1,5 +1,5 @@
-import React from 'react';
-import {Route, Switch} from "react-router-dom";
+import React, {useState} from 'react';
+import {Route} from "react-router-dom";
 import './App.css';
 import InitialSignInPage from './components/InitialSignInPage';
 import InitialCreateAccountPage from './components/InitialCreateAccountPage';
@@ -14,12 +14,21 @@ import PrivateRoute from './components/PrivateRoute';
 import ShopperHomepage from './components/ShopperHomepage';
 import ShopperViewInventory from './components/ShopperViewInventory';
 import FarmerProfile from './components/FarmerProfile';
+import {axiosWithAuth} from './utils/axiosWithAuth';
 
 
 function App() {
+
+	const [ inventory, setInventory ] = useState([]);
+	const fetchInventory = () => {
+		axiosWithAuth().get('/inventory').then((response) => {
+			setInventory(response.data);
+		});
+	};
+	
 	return (
 		<>
-			<FarmerEditInventoryContext.Provider>
+			<FarmerEditInventoryContext.Provider value={{inventory, fetchInventory}}>
 				<Route exact path='/' component={InitialSignInPage}/>
 				<Route path='/register' component={InitialCreateAccountPage}/>
 				
