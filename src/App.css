@@ -495,6 +495,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .shopper-view-inventory-container h2 {
+	margin-bottom: 64px;
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
 	font-size: 30px;
@@ -502,29 +503,24 @@ input[type=number]::-webkit-outer-spin-button {
 	color: #4D4D4D;
 }
 
-.shopper-view-inventory-container h3 {
-	text-align: center;
-	margin-bottom: 64px;
-	font-family: 'Roboto', sans-serif;
-	font-size: 20px;
-	font-weight: 400;
-	color: #4D4D4D;
-}
-
 .products {
 	width: 100%;
-	margin-bottom: 32px;
+	margin-bottom: 48px;
 }
 
 .product-row {
-	margin-bottom: 32px;
+	margin-bottom: 16px;
+	padding: 16px;
+	background: #FFFFFF;
+	border-radius: 5px;
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
 }
 
 .product-row img {
-	height: 150px;
+	width: 75px;
+	margin-left: 64px;
+	margin-right: 128px;
 }
 
 .product-row div p {

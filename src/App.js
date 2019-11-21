@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 import './App.css';
 import InitialSignInPage from './components/InitialSignInPage';
 import InitialCreateAccountPage from './components/InitialCreateAccountPage';
@@ -29,10 +29,9 @@ function App() {
 				<Route path='/shopper/register' component={ShopperCreateAccountPage}/>
 				<Route path='/farmer/profile' component={FarmerProfile}/>
 				
-				
 				<PrivateRoute path='/shopper/dashboard' component={ShopperHomepage}/>
 				<PrivateRoute path='/shopper/farm/:id' component={ShopperViewInventory}/>
-				
+		
 				<PrivateRoute path='/farmer/dashboard' component={FarmerHomepage}/>
 				<PrivateRoute path='/farmer/inventory' component={FarmerEditInventory}/>
 			</FarmerEditInventoryContext.Provider>
