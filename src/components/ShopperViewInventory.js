@@ -24,6 +24,16 @@ const ShopperViewInventory = (props) => {
 		fetchProducts();
 	}, []);
 	
+	const findImage = (itemName) => {
+		console.log(images);
+		for (let i = 0; i < images.length; i++) {
+			if (images[i].name === itemName.toLowerCase()) {
+				return images[i].image;
+			}
+		}
+		return images[0].image;
+	}
+
 	return (
 		<div>
 			<HeaderWithLogOut/>
@@ -35,7 +45,7 @@ const ShopperViewInventory = (props) => {
 					{products.map((item, index) => {
 						return (
 							<div className='product-row' key={index}>
-								<img src='https://i.imgur.com/OzziK4D.png' alt='produce'/>
+								<img src={findImage(item.item)} alt='produce'/>
 								<div>
 									<p>{item.item}</p>
 									<p>Available: {item.quantity} units</p>
