@@ -10,6 +10,8 @@ if (document.readyState === "interactive" || document.readyState === "complete")
 }
 
 function resolve() {
+    document.body.removeAttribute("unresolved");
+
     TweenMax.from("#content", 1, {
         opacity: -2,
         y: 100
