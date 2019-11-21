@@ -1,3 +1,3 @@
 import { createContext } from 'react';
 
-export const FarmerEditInventoryContext = createContext();
+export const FarmerEditInventoryContext = createContext(null);
