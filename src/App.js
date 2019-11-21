@@ -36,7 +36,7 @@ function App() {
 				<Route path='/shopper/login' component={ShopperSignInPage}/>
 				<Route path='/farmer/register' component={FarmerCreateAccountPage}/>
 				<Route path='/shopper/register' component={ShopperCreateAccountPage}/>
-				<Route path='/farmer/profile' component={FarmerProfile}/>
+				<PrivateRoute path='/farmer/profile' component={FarmerProfile}/>
 				
 				<PrivateRoute path='/shopper/dashboard' component={ShopperHomepage}/>
 				<PrivateRoute path='/shopper/farm/:id' component={ShopperViewInventory}/>

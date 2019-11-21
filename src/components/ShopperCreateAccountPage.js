@@ -44,7 +44,7 @@ const ShopperCreateAccountPage = (props) => {
 							.post('/customers/register', values)
 							.then((response) => {
 								localStorage.setItem('token', response.data.token);
-								props.history.push('/shopper/dashboard');
+								props.history.push('/');
 								tools.resetForm();
 							})
 							.catch((error) => {
