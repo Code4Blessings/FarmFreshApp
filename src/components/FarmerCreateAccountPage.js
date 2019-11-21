@@ -44,7 +44,7 @@ const FarmerCreateAccountPage = (props) => {
 							.post('/farmers/register', values)
 							.then((response) => {
 								localStorage.setItem('token', response.data.token);
-								props.history.push('/farmer/dashboard');
+								props.history.push('/');
 								tools.resetForm();
 							})
 							.catch((error) => {
