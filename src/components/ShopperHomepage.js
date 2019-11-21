@@ -24,7 +24,7 @@ const ShopperHomepage = () => {
 	return (
 		<div>
 			<HeaderWithLogOut />
-			{/* log out button needed here */}
+
 			<div className='shopper-homepage-container'>
 				<h2>Choose Your Farm:</h2>
 				<div className='farm-container'>
@@ -34,13 +34,11 @@ const ShopperHomepage = () => {
 								<div>
 									<h3>{iteration.farm_name}</h3>
 									<p>{iteration.farm_address}</p>
-									{/* <p>Oakland, CA 94606</p> */}
 								</div>
 								<div>
 									<p>Currently Available:</p>
 									<p>Squash, Corn</p>
 									<Link to={`/shopper/farm/${iteration.id}`}>view full inventory</Link>
-									{/* need to create dynamic link */}
 								</div>
 							</div>
 						);

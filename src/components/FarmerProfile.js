@@ -31,13 +31,12 @@ const FarmerProfile = (props) => {
 			<section className='farmer-and-shopper-sign-in-page-section'>
 				<h2>Create A Farm Profile</h2>
 
-				{/* form will be specific to the page i think */}
 				<Formik
 					initialValues={{
 						farm_name    : '',
 						farm_address : '',
 					}}
-					onSubmit={(values, tools) => {
+					onSubmit={(values) => {
 						console.log('Submitted Form', values);
 						axiosWithAuth()
 							.put('/farms', values)
