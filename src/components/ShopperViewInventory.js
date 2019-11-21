@@ -28,9 +28,26 @@ const ShopperViewInventory = () => {
 			<HeaderWithLogOut/>
 			<ShopperGoBackButton/>
 			<div className='shopper-view-inventory-container'>
-				
+			
+				<h2>Shane Farms</h2>
+				<h3>1122 Redwood Ave. Oakland, CA 94606</h3>
+				<div className='products'>
+					{products.map((item, index) => {
+						return (
+							<div className='product-row' key={index}>
+								<img src='' alt='carrot' />
+								<div>
+									<p>{item.item}</p>
+									<p>Available: {item.quantity} units</p>
+									<p>Quantity:</p>
+								</div>
+							</div>
+						);
+					})}
+				</div>
 
 				<button className='farmer-sign-in-button'>Place Order</button>
+			
 			</div>
 		</div>
 	);
