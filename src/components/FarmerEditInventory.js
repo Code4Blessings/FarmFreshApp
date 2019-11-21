@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
-
 import HeaderWithLogOut from './HeaderWithLogOut';
+import FarmerGoBackButton from './FarmerGoBackButton';
 import { FarmerEditInventoryContext } from './contexts/FarmerEditInventoryContext';
 
 // validating form
@@ -50,7 +50,6 @@ const AddInventory = () => {
 			.delete(`/inventory/${id}`)
 			.then((response) => {
 				fetchInventory();
-				console.log(deleteItem);
 			})
 			.catch((err) => console.log(err));
 	};
@@ -75,8 +74,12 @@ const AddInventory = () => {
 
 	return (
 		<div>
-			<HeaderWithLogOut />
-			<section className='inventory-container'>
+			<HeaderWithLogOut/>
+			
+			<FarmerGoBackButton/>
+			
+			<section className='inventory-container'>	
+
 				<h2>Add/Edit Inventory</h2>
 
 				<Formik

@@ -480,7 +480,7 @@ input[type=number]::-webkit-outer-spin-button {
 .shopper-view-inventory-container {
 	max-width: 515px;
 	margin: 0 auto;
-	margin-top: 16px;
+	margin-top: 150px;
 	margin-bottom: 150px;
 	display: flex;
 	flex-direction: column;
@@ -495,6 +495,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .shopper-view-inventory-container h2 {
+	margin-bottom: 64px;
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
 	font-size: 30px;
@@ -502,29 +503,24 @@ input[type=number]::-webkit-outer-spin-button {
 	color: #4D4D4D;
 }
 
-.shopper-view-inventory-container h3 {
-	text-align: center;
-	margin-bottom: 64px;
-	font-family: 'Roboto', sans-serif;
-	font-size: 20px;
-	font-weight: 400;
-	color: #4D4D4D;
-}
-
 .products {
 	width: 100%;
-	margin-bottom: 32px;
+	margin-bottom: 48px;
 }
 
 .product-row {
-	margin-bottom: 32px;
+	margin-bottom: 16px;
+	padding: 16px;
+	background: #FFFFFF;
+	border-radius: 5px;
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
 }
 
 .product-row img {
-	height: 150px;
+	width: 75px;
+	margin-left: 64px;
+	margin-right: 128px;
 }
 
 .product-row div p {
@@ -535,4 +531,29 @@ input[type=number]::-webkit-outer-spin-button {
 
 .product-row div p:first-child {
 	font-weight: 500;
+}
+
+/**************** go back button component ****************/
+
+.go-back-container {
+	width: 515px;
+	margin: 0 auto;
+	margin-top: 16px;
+}
+
+.go-back-container:hover {
+	opacity: 0.9;
+}
+
+.go-back-container i {
+	margin-right: 5px;
+	font-size: 18px;
+	color: #3D6600;
+}
+
+.go-back-container a {
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	color: #3D6600;
 }

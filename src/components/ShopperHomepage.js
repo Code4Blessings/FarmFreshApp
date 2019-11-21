@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { axiosWithAuth } from '../utils/axiosWithAuth';
+import React, {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
+import {axiosWithAuth} from '../utils/axiosWithAuth';
 import HeaderWithLogOut from './HeaderWithLogOut';
 
 const ShopperHomepage = () => {
-	const [ farms, setFarms ] = useState([]);
+	const [farms, setFarms] = useState([]);
 
 	useEffect(() => {
 		const fetchFarms = () => {
@@ -12,7 +12,6 @@ const ShopperHomepage = () => {
 				.get('/farms')
 				.then((response) => {
 					setFarms(response.data);
-					console.log(response);
 				})
 				.catch((error) => {
 					console.error(error);
@@ -24,9 +23,8 @@ const ShopperHomepage = () => {
 	return (
 		<div>
 			<HeaderWithLogOut />
-
 			<div className='shopper-homepage-container'>
-				<h2>Choose Your Farm:</h2>
+				<h2>Choose Your Farm</h2>
 				<div className='farm-container'>
 					{farms.map((iteration, index) => {
 						return (
@@ -37,7 +35,7 @@ const ShopperHomepage = () => {
 								</div>
 								<div>
 									<p>Currently Available:</p>
-									<p>Squash, Corn</p>
+									<p>and many more!</p>
 									<Link to={`/shopper/farm/${iteration.id}`}>view full inventory</Link>
 								</div>
 							</div>
