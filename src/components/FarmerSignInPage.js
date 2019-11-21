@@ -1,19 +1,18 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
 import { Formik, Form, Field } from 'formik';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 
 const FarmerSignInPage = (props) => {
-	const [error, setError] = useState('');
-	
+	const [ error, setError ] = useState('');
+
 	return (
 		<div>
 			<Header />
 			<section className='farmer-and-shopper-sign-in-page-section'>
 				<h2>Sign In</h2>
 
-				{/* form will be specific to the page i think */}
 				<Formik
 					initialValues={{
 						username : '',
@@ -31,10 +30,9 @@ const FarmerSignInPage = (props) => {
 								console.log(error);
 								if (error) {
 									setError('Wrong email or password');
-								};
+								}
 							});
-					}}
-				>
+					}}>
 					{() => {
 						return (
 							<Form className='form' autoComplete='off'>
@@ -66,19 +64,3 @@ const FarmerSignInPage = (props) => {
 };
 
 export default FarmerSignInPage;
-
-// const FormikLoginForm = withFormik({
-// 	mapPropsToValues({ username, password }) {
-// 	  return {
-// 		username: username || "",
-// 		password: password || ""
-// 	  };
-// 	},
-
-// 	handleSubmit(values) {
-// 	  console.log(values);
-// 	  //THIS IS WHERE YOU DO YOUR FORM SUBMISSION CODE... HTTP REQUESTS, ETC.
-// 	}
-//   })(LoginForm);
-
-//   export default FormikLoginForm;

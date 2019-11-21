@@ -1,12 +1,12 @@
-import React, {useState, useEffect, useContext} from 'react';
-import {Formik, Form, Field, ErrorMessage} from 'formik';
-import {axiosWithAuth} from '../utils/axiosWithAuth';
+import React, { useState, useEffect, useContext } from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { axiosWithAuth } from '../utils/axiosWithAuth';
 import HeaderWithLogOut from './HeaderWithLogOut';
 import FarmerGoBackButton from './FarmerGoBackButton';
 import { FarmerEditInventoryContext } from './contexts/FarmerEditInventoryContext';
 
 // validating form
-const validate = ({item_name, quantity}) => {
+const validate = ({ item_name, quantity }) => {
 	const errors = {};
 
 	// validating item_name
@@ -29,13 +29,10 @@ const validate = ({item_name, quantity}) => {
 };
 
 const AddInventory = () => {
-
-	// const [ inventory, setInventory ] = useState([]);
 	const [ editing, setEditing ] = useState(false);
 	const [ lineItem, setLineItem ] = useState({});
 	const { inventory, fetchInventory } = useContext(FarmerEditInventoryContext);
 	console.log(inventory);
-
 
 	const editRow = (item) => {
 		setEditing(true);
@@ -82,6 +79,7 @@ const AddInventory = () => {
 			<FarmerGoBackButton/>
 			
 			<section className='inventory-container'>	
+
 				<h2>Add/Edit Inventory</h2>
 
 				<Formik
@@ -89,7 +87,6 @@ const AddInventory = () => {
 						item_name : '',
 						quantity  : '',
 					}}
-					
 					onSubmit={(values, tools) => {
 						const payload = {
 							item     : values.item_name,
@@ -106,19 +103,19 @@ const AddInventory = () => {
 								console.log(error);
 							});
 					}}
-					
 					validate={validate}>
-					
 					{() => {
 						return (
 							<Form className='inventory-form' autoComplete='off'>
 								<div>
-									<Field className='quantity-input' name='quantity' type='number' placeholder='1'/>
-									<Field className='item-name-input' name='item_name' type='text' placeholder='Item Name'/>
-									<button className='add-button' type='submit'>Add</button>
+									<Field className='quantity-input' name='quantity' type='number' placeholder='1' />
+									<Field className='item-name-input' name='item_name' type='text' placeholder='Item Name' />
+									<button className='add-button' type='submit'>
+										Add
+									</button>
 								</div>
-								<ErrorMessage name='quantity' component='div' className='inventory-error'/>
-								<ErrorMessage name='item_name' component='div' className='inventory-error'/>
+								<ErrorMessage name='quantity' component='div' className='inventory-error' />
+								<ErrorMessage name='item_name' component='div' className='inventory-error' />
 							</Form>
 						);
 					}}
@@ -130,7 +127,7 @@ const AddInventory = () => {
 					<div>
 						<p>Action</p>
 						<p>Item</p>
-						<p>Qty.</p>	
+						<p>Qty.</p>
 					</div>
 				</div>
 
@@ -138,16 +135,21 @@ const AddInventory = () => {
 					{inventory.map((item, index) => (
 						<form className='table-row' key={index}>
 							<span>
-								<i className='fas fa-pen' onClick={() => editRow(item)}/>
-								<i className='fas fa-trash' onClick={() => deleteItem(item.id)}/>
+								<i className='fas fa-pen' onClick={() => editRow(item)} />
+								<i className='fas fa-trash' onClick={() => deleteItem(item.id)} />
 							</span>
 							{editing && item.id === lineItem.id ? (
-								<input className='edit-item-name-input' name='item' value={lineItem.item} onChange={changeLineItem}/>
+								<input className='edit-item-name-input' name='item' value={lineItem.item} onChange={changeLineItem} />
 							) : (
 								<p>{item.item}</p>
 							)}
 							{editing && item.id === lineItem.id ? (
-								<input className='edit-quantity-input' name='quantity' value={lineItem.quantity} onChange={changeLineItem}/>
+								<input
+									className='edit-quantity-input'
+									name='quantity'
+									value={lineItem.quantity}
+									onChange={changeLineItem}
+								/>
 							) : (
 								<p>{item.quantity}</p>
 							)}
@@ -156,7 +158,9 @@ const AddInventory = () => {
 				</div>
 
 				{editing && (
-					<button className='save-changes-button' onClick={UpdateItem}>Save Changes</button>
+					<button className='save-changes-button' onClick={UpdateItem}>
+						Save Changes
+					</button>
 				)}
 			</section>
 		</div>
