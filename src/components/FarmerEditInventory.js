@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { Link } from 'react-router-dom';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 import HeaderWithLogOut from './HeaderWithLogOut';
+import { FarmerEditInventoryContext } from './contexts/FarmerEditInventoryContext';
 
 // validating form
 const validate = ({ item_name, quantity }) => {
@@ -27,21 +27,16 @@ const validate = ({ item_name, quantity }) => {
 };
 
 const AddInventory = () => {
-	const [ inventory, setInventory ] = useState([]);
+	// const [ inventory, setInventory ] = useState([]);
 	const [ editing, setEditing ] = useState(false);
 	const [ lineItem, setLineItem ] = useState({});
+	const { inventory, fetchInventory } = useContext(FarmerEditInventoryContext);
+	console.log(inventory);
 
 	const editRow = (item) => {
 		setEditing(true);
 		setLineItem({
 			...item,
-		});
-	};
-
-	const fetchInventory = () => {
-		axiosWithAuth().get('/inventory').then((response) => {
-			setInventory(response.data);
-			console.log(response);
 		});
 	};
 
@@ -93,6 +88,7 @@ const AddInventory = () => {
 							item     : values.item_name,
 							quantity : Number(values.quantity),
 						};
+						console.log(payload);
 						axiosWithAuth()
 							.post('/inventory', payload)
 							.then((response) => {
