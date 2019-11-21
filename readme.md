@@ -1,13 +1,10 @@
-# React I Rubric
-## Applied Javascript
-* Student incorporated a third party event/animation library such as Greensock, Anime, React-motion etc.
-## Intro to React
-* Student was able to architect components to be easily reused. Student used advanced React techniques like the composition pattern, custom hooks, render props, HOCs, etc.
-## Single Page Application
-* Not only are standard network request techniques employed, the code is organized in such a fashion that the student demonstrated proper use of container vs presentational components or other industry standards, conventions or patterns.
-## Form Management
-* Student showed great insight in setting up the state management for the app's forms. Form validation is in place for all fields, and covers all use cases. Loading states and success/error notifications are in place and add to the overall UX of the app.
-## MVP Work
-* Student's work demonstrates that all MVP features were built and the student went above and beyond the project.
-## Team Work Score
-* Pair programmed with the Web UI and Back end Architect.
+PITCH
+What do we want!?!? Fresh, organic, non-GMO, pesticide/herbicide free produce grown by local farmers. How do we get it? By using our wonderful app that links up farmers with those excited to consume delicious fresh locally sourced produce. Farmers throw away tons of food and lose money on their surplus inventory. Lets fix that problem.
+MVP
+- As a Farmer I can log in and add available options for purchase from my farm. 
+- As a consumer I can log in and see produce available in my local area (No GEOlocation necessary for MVP).
+- As a farmer I can Edit and delete items from my inventory.
+- As a consumer I can fill up my shopping cart, and place an order (no payment necessary for MVP).
+- As a farmer I can see the orders that come in for my produce so that I can prepare the orders for pick up.
+
+instructions on how to start the project with installs and start and functionality of each component and the flow. 
