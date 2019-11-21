@@ -1,7 +1,7 @@
-import React, { useRef, useEffect } from 'react';
+import React, {useRef, useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import Header from './Header';
-import { gsap } from 'gsap';
+import HeaderWithLinkBackToLandingPage from './HeaderWithLinkBackToLandingPage';
+import {gsap} from 'gsap';
 
 const InitialSignInPage = () => {
     let slideButton1 = useRef(null);
@@ -15,7 +15,7 @@ const InitialSignInPage = () => {
 
     return (
         <div>
-            <Header/>
+            <HeaderWithLinkBackToLandingPage/>
             <section className='initial-sign-in-page-section'>
                 <div>
                     <h2>Welcome!</h2>
