@@ -1,9 +1,10 @@
-import React from "react";
-import Header from "./Header";
+import React from 'react';
+import Header from './Header';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { axiosWithAuth } from '../utils/axiosWithAuth';
 
 // validating form
-const validate = ({ farm_name, address }) => {
+const validate = ({ farm_name, farm_address }) => {
 	const errors = {};
 
 	// validating Farm Name
@@ -14,30 +15,40 @@ const validate = ({ farm_name, address }) => {
 	}
 
 	// validating Address
-	if (!address) {
-		errors.address = 'Please enter farm address';
-    } else if (address.length < 5) {
-        errors.address = 'Your address must have 5 characters or more';
-    }
+	if (!farm_address) {
+		errors.farm_address = 'Please enter farm address';
+	} else if (farm_address.length < 5) {
+		errors.farm_address = 'Your address must have 5 characters or more';
+	}
 
 	return errors;
 };
 
-
-const FarmerProfile = () => {
-    return (
-        <div>
-            <Header/>
-            <section className='farmer-and-shopper-sign-in-page-section'>
+const FarmerProfile = (props) => {
+	return (
+		<div>
+			<Header />
+			<section className='farmer-and-shopper-sign-in-page-section'>
 				<h2>Create A Farm Profile</h2>
 
 				{/* form will be specific to the page i think */}
 				<Formik
 					initialValues={{
-						farm_name : '',
-						address : '',
+						farm_name    : '',
+						farm_address : '',
 					}}
-					
+					onSubmit={(values, tools) => {
+						console.log('Submitted Form', values);
+						axiosWithAuth()
+							.put('/farms', values)
+							.then((response) => {
+								console.log(response);
+								props.history.push('/farmer/dashboard');
+							})
+							.catch((error) => {
+								console.log(error);
+							});
+					}}
 					validate={validate}>
 					{() => {
 						return (
@@ -49,23 +60,21 @@ const FarmerProfile = () => {
 								</div>
 
 								<div className='input-container'>
-									<label htmlFor='address'>Farm Address</label>
-									<Field name='address' type='text' placeholder='Enter the farm address' />
-									<ErrorMessage name='address' component='div' className='error' />
+									<label htmlFor='farm_address'>Farm Address</label>
+									<Field name='farm_address' type='text' placeholder='Enter the farm address' />
+									<ErrorMessage name='farm_address' component='div' className='error' />
 								</div>
 
 								<button className='farmer-sign-in-button button-spacing' type='submit'>
-									Create 
+									Create
 								</button>
 							</Form>
 						);
 					}}
 				</Formik>
 			</section>
-
-        </div>
-
-    );
-}
+		</div>
+	);
+};
 
 export default FarmerProfile;
