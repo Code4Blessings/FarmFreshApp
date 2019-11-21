@@ -11,7 +11,7 @@ const ShopperViewInventory = (props) => {
 	
 	// get request stores data, specific farm's inventory, in state
 	useEffect(() => {
-		const fetchProducts = (id) => {
+		const fetchProducts = () => {
 			axiosWithAuth()
 				.get(`/inventory/${params.id}`)
 				.then((response) => {
@@ -23,7 +23,7 @@ const ShopperViewInventory = (props) => {
 		};
 		fetchProducts();
 	}, []);
-	
+
 	const findImage = (itemName) => {
 		console.log(images);
 		for (let i = 0; i < images.length; i++) {

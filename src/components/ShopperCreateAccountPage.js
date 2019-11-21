@@ -34,7 +34,6 @@ const ShopperCreateAccountPage = (props) => {
 			<section className='farmer-and-shopper-sign-in-page-section'>
 				<h2>Create an Account</h2>
 
-				{/* form will be specific to the page i think */}
 				<Formik
 					initialValues={{
 						username : '',
@@ -45,7 +44,7 @@ const ShopperCreateAccountPage = (props) => {
 							.post('/customers/register', values)
 							.then((response) => {
 								localStorage.setItem('token', response.data.token);
-								props.history.push('/shopper/dashboard');
+								props.history.push('/');
 								tools.resetForm();
 							})
 							.catch((error) => {

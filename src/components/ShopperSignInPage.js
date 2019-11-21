@@ -13,7 +13,6 @@ const ShopperSignInPage = (props) => {
 			<section className='farmer-and-shopper-sign-in-page-section'>
 				<h2>Sign In</h2>
 
-				{/* form will be specific to the page i think */}
 				<Formik
 					initialValues={{
 						username : '',
