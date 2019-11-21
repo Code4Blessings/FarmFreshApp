@@ -54,7 +54,6 @@ const AddInventory = () => {
 			.delete(`/inventory/${id}`)
 			.then((response) => {
 				fetchInventory();
-				console.log(deleteItem);
 			})
 			.catch((err) => console.log(err));
 	};
