@@ -47,9 +47,12 @@ const ShopperViewInventory = (props) => {
 							<div className='product-row' key={index}>
 								<img src={findImage(item.item)} alt='produce'/>
 								<div>
-									<p>{item.item}</p>
+									<p className='item-name'>{item.item}</p>
 									<p>Available: {item.quantity} units</p>
-									<input className='edit-quantity-input' type='number'></input>
+									<div className='select-quantity-container'>
+										<p>Quantity:</p>
+										<input type='number'></input>
+									</div>
 								</div>
 							</div>
 						);
