@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import HeaderWithLinkBackToLandingPage from './HeaderWithLinkBackToLandingPage';
 import {gsap} from 'gsap';
