@@ -575,9 +575,3 @@ input[type=number]::-webkit-outer-spin-button {
 	font-size: 18px;
 	color: #3D6600;
 }
-
-/* unresolved */
-
-[unresolved] {
-	display: none;
-}
