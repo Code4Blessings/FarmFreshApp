@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import HeaderWithLinkBackToLandingPage from './HeaderWithLinkBackToLandingPage';
-import {TweenMax} from 'gsap';
+import {gsap, TweenMax} from 'gsap';
 
 if (document.readyState === "interactive" || document.readyState === "complete") {
     resolve();
@@ -17,6 +17,7 @@ function resolve() {
         y: 100
     });
 }
+
 
 const InitialSignInPage = () => {
     return (
