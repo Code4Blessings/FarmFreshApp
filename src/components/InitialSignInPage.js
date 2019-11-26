@@ -1,7 +1,8 @@
 import React, {useRef, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import HeaderWithLinkBackToLandingPage from './HeaderWithLinkBackToLandingPage';
-import {TweenMax, Power3} from 'gsap';
+import {gsap, TweenMax, Power3} from 'gsap';
+gsap.registerPlugin(TweenMax, Power3);
 
 const InitialSignInPage = () => {
     let welcome = useRef(null);
@@ -10,43 +11,35 @@ const InitialSignInPage = () => {
     let createAccount = useRef(null);
     
     useEffect(() => {
-        TweenMax.to(
-            welcome,
-            1,
-            {
+        TweenMax.to(welcome, 1, {
                 opacity: 1,
                 y: -50,
-                ease: Power3.easeOut
+                ease: Power3.easeOut,
+                delay: 0.1
             }
         );
-        TweenMax.to(
-            farmerSignIn,
-            1,
-            {
+        TweenMax.to(farmerSignIn, 1, {
                 opacity: 1,
                 y: -50,
-                ease: Power3.easeOut
+                ease: Power3.easeOut,
+                delay: 0.2
             }
         );
-        TweenMax.to(
-            shopperSignIn,
-            1,
-            {
+        TweenMax.to(shopperSignIn, 1, {
                 opacity: 1,
                 y: -50,
-                ease: Power3.easeOut
+                ease: Power3.easeOut,
+                delay: 0.3
             }
         );
-        TweenMax.to(
-            createAccount,
-            1,
-            {
+        TweenMax.to(createAccount, 1, {
                 opacity: 1,
                 y: -50,
-                ease: Power3.easeOut
+                ease: Power3.easeOut,
+                delay: 0.4
             }
         );
-    },[])
+    }, [])
     
     return (
         <div>
