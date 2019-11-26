@@ -1,15 +1,51 @@
 import React, {useRef, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import HeaderWithLinkBackToLandingPage from './HeaderWithLinkBackToLandingPage';
-import {gsap} from 'gsap';
+import {TweenMax, Power3} from 'gsap';
 
 const InitialSignInPage = () => {
-    let slideButton1 = useRef(null);
-    let slideButton2 = useRef(null);
+    let welcome = useRef(null);
+    let farmerSignIn = useRef(null);
+    let shopperSignIn = useRef(null);
+    let createAccount = useRef(null);
     
     useEffect(() => {
-        gsap.to(slideButton1,{ duration: 3.5, ease: "back.in(1.0)", y: 90 });
-        gsap.to(slideButton2,{ duration: 3.5, ease: "back.in(1.0)", y: -80 });
+        TweenMax.to(
+            welcome,
+            1,
+            {
+                opacity: 1,
+                y: -50,
+                ease: Power3.easeOut
+            }
+        );
+        TweenMax.to(
+            farmerSignIn,
+            1,
+            {
+                opacity: 1,
+                y: -50,
+                ease: Power3.easeOut
+            }
+        );
+        TweenMax.to(
+            shopperSignIn,
+            1,
+            {
+                opacity: 1,
+                y: -50,
+                ease: Power3.easeOut
+            }
+        );
+        TweenMax.to(
+            createAccount,
+            1,
+            {
+                opacity: 1,
+                y: -50,
+                ease: Power3.easeOut
+            }
+        );
     },[])
     
     return (
@@ -17,13 +53,13 @@ const InitialSignInPage = () => {
             <HeaderWithLinkBackToLandingPage/>
             <section className='initial-sign-in-page-section'>
                 <div id='content'>
-                    <h2>Welcome!</h2>
+                    <h2 className='invisible' ref={element => {welcome = element}}>Welcome!</h2>
 
-                   <Link to='/shopper/login'><button className='shopper-sign-in-button' ref={button1 => {slideButton1 = button1}}>Shopper Sign In</button></Link>
+                    <Link to='/shopper/login' className='invisible' ref={element => {farmerSignIn = element}}><button className='shopper-sign-in-button'>Shopper Sign In</button></Link>
 
-                    <Link to='/farmer/login'><button className='farmer-sign-in-button' ref={button2 => { slideButton2 = button2 }}>Farmer Sign In</button></Link>
+                    <Link to='/farmer/login' className='invisible' ref={element => {shopperSignIn = element}}><button className='farmer-sign-in-button'>Farmer Sign In</button></Link>
 
-                    <Link to='/register'><p>Create an Account</p></Link>
+                    <Link to='/register' className='invisible' ref={element => {createAccount = element}}><p>Create an Account</p></Link>
                 </div>
             </section>
         </div>

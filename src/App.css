@@ -67,7 +67,7 @@
 }
 
 .initial-sign-in-page-section div {
-	height: 80vh;
+	height: 90vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -574,4 +574,8 @@ input[type=number]::-webkit-outer-spin-button {
 	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
 	color: #3D6600;
+}
+
+.invisible {
+	opacity: 0;
 }
